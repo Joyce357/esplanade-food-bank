@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-fixed": "#281900", "on-primary": "#ffffff", "on-primary-fixed": "#00210e", "surface-container-highest": "#d8e6da", "surface-tint": "#336946", "tertiary-container": "#6e4b00", "on-secondary": "#ffffff", "surface-container-high": "#deecdf", "on-secondary-container": "#3e6d3e", "outline": "#717971", "surface-bright": "#effdf0", "tertiary-fixed": "#ffdead", "surface-container-low": "#e9f7eb", "surface-variant": "#d8e6da", "primary-fixed": "#b6f0c3", "on-background": "#121e17", "on-error": "#ffffff", "primary-fixed-dim": "#9ad4a9", "error": "#ba1a1a", "surface-dim": "#d0ded1", "on-secondary-fixed": "#002105", "tertiary": "#503600", "background": "#effdf0", "error-container": "#ffdad6", "outline-variant": "#c0c9bf", "on-surface-variant": "#414941", "primary-container": "#265c3a", "on-tertiary": "#ffffff", "inverse-primary": "#9ad4a9", "tertiary-fixed-dim": "#fabc4d", "primary": "#094425", "surface-container": "#e3f2e5", "secondary-fixed-dim": "#9fd49b", "on-secondary-fixed-variant": "#215025", "on-tertiary-container": "#f9ba4c", "secondary": "#39693b", "secondary-container": "#b8edb3", "on-tertiary-fixed-variant": "#604100", "on-error-container": "#93000a", "on-primary-container": "#99d2a7", "inverse-on-surface": "#e6f4e8", "secondary-fixed": "#baf0b6", "surface": "#effdf0", "inverse-surface": "#27332b", "surface-container-lowest": "#ffffff", "on-surface": "#121e17", "on-primary-fixed-variant": "#195130" }, "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, "spacing": { "space-lg": "2rem", "gutter": "1.5rem", "margin-desktop": "3rem", "space-xs": "0.375rem", "margin": "1.25rem", "space-sm": "0.75rem", "space-md": "1.25rem", "margin-tablet": "2rem", "space-xl": "3.5rem", "gutter-desktop": "2rem" }, "fontFamily": { "body-md": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "body-xl": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "display-hero-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"] }, "fontSize": { "body-md": ["18px", { "lineHeight": "28px", "fontWeight": "500" }], "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "display-hero": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "body-xl": ["20px", { "lineHeight": "32px", "fontWeight": "400" }], "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.03em", "fontWeight": "700" }], "display-hero-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "800" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "label-lg": ["16px", { "lineHeight": "22px", "letterSpacing": "0.02em", "fontWeight": "700" }], "headline-md": ["22px", { "lineHeight": "30px", "fontWeight": "600" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col selection:bg-secondary-container selection:text-on-secondary-container"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="bg-surface-container-high/60 hidden md:block text-on-surface-variant font-label-md text-label-md"><div class="max-w-7xl mx-auto px-6 lg:px-12 h-9 flex items-center justify-between"><div class="flex items-center gap-6"><span>Helpline: (416) 555-0199</span><span class="inline-flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-secondary"></span>Open Today: 10am - 4pm</span></div><div class="flex items-center gap-4"><span>English / Français / Español</span></div></div></div><div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-4"><div class="flex items-center gap-3 shrink-0"><img alt="logo.jpeg" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XqkGhrXcWfrjlh4PkxY0A1fqM3HiLgYfH8jFfwuNIOBkQMzf8LKfCBr5WaLd8wS72EULKGTWEZbT8JCwvKMpVDerrJFb8S6ciFbaWAepNsC6VoTdZ63lSyPi8M7pRzjFFwCFYn2n_E0SpLSAojzuL35Wwpw0nrzqknBMC-XP-yf-jVFzQw6sHPoeCZ_G3nmTgkhIA9ZuB4aXfIdIl196_gppVzaXq_txeytRqcgZs6ycUoGke0af0FBGkzjKSlmWW_HhR_0eoL"/><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold hidden sm:inline-block">Esplanade Food Bank</span></div><nav class="hidden xl:flex items-center gap-1 text-on-surface-variant font-label-md text-label-md" data-active-classes="text-primary font-bold bg-surface-container rounded-full px-3 py-1.5"><a aria-current="page" class="transition-colors text-primary font-bold bg-surface-container rounded-full px-3 py-1.5" data-path="home" href="#">Home</a><a class="px-3 py-1.5 transition-colors hover:text-on-surface hover:bg-surface-container-low rounded-full" data-path="our-story" href="#">Our Story</a><a class="px-3 py-1.5 transition-colors hover:text-on-surface hover:bg-surface-container-low rounded-full" data-path="programs-and-events" href="#">Programs &amp; Events</a><a class="px-3 py-1.5 transition-colors hover:text-on-surface hover:bg-surface-container-low rounded-full" data-path="get-food" href="#">Get Food</a><a class="px-3 py-1.5 transition-colors hover:text-on-surface hover:bg-surface-container-low rounded-full" data-path="donate" href="#">Donate</a><a class="px-3 py-1.5 transition-colors hover:text-on-surface hover:bg-surface-container-low rounded-full" data-path="volunteer" href="#">Volunteer</a><a class="px-3 py-1.5 transition-colors hover:text-on-surface hover:bg-surface-container-low rounded-full" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-2.5"><a class="relative inline-flex items-center justify-center font-label-md text-label-md bg-primary-container text-on-primary font-bold px-4 py-2.5 rounded-full shadow-sm hover:bg-primary transition-all" data-path="get-food" href="#"><span class="flex h-2 w-2 relative mr-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-fixed opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary-fixed"></span></span>Get Food</a><a class="inline-flex items-center justify-center font-label-md text-label-md bg-tertiary-fixed text-on-tertiary-fixed font-bold px-4 py-2.5 rounded-full hover:bg-tertiary-fixed-dim transition-all" data-path="donate" href="#">Donate</a><a class="hidden sm:inline-flex items-center justify-center font-label-md text-label-md bg-surface-container text-primary font-bold px-4 py-2.5 rounded-full hover:bg-surface-container-high transition-all" data-path="volunteer" href="#">Volunteer</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 ml-1"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface flex-1"><div class="flex flex-col w-full">
+<!-- SECTION 1: HERO PHOTOGRAPHIC SLIDESHOW -->
+<section class="relative w-full overflow-hidden bg-primary -mt-20">
+<div class="relative w-full min-h-[921px] lg:min-h-[972px] flex items-end" id="hero-slider">
+<!-- Slide 1 (Active) -->
+<div class="hero-slide active absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-100">
+<div class="w-full h-full bg-cover bg-center" data-alt="A warm, vibrant community scene inside a sun-drenched Toronto pantry with high ceilings, timber beams, overflowing wooden crates of ripe crisp apples, heirloom tomatoes, and lush leafy kale. Multi-generational neighbours smile as volunteers hand over freshly baked crusty bread, cinematic soft natural lighting, deep forest green accents, organic golden hour warmth." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDfJf_vCD0m3f7JPfwy87UBbwL0SASVKYyICYwPyKJarBjgG5gc54Xp_4f8B4IcSFOlTjM7ZIEK_Imq-VN-9uEhVGpNQM-wc9O-3WgW8uyaQjX0qdVQe6J1q1AElfXicyi_glKLs15q1uwmcjCU8CuXxq5G5StnFWt1h0uW5YgJVfaa9bWN90TpMscaF1lIbKkFXCNSx7oOEWriqBSSVXU2oAfKPCiF0EWuCtBbXzmXcDv3SxGXAbng')">
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/95 via-primary/70 to-primary/40 mix-blend-multiply"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/80 via-transparent to-primary/60"></div>
+</div>
+</div>
+<!-- Slide 2 -->
+<div class="hero-slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-0 pointer-events-none">
+<div class="w-full h-full bg-cover bg-center" data-alt="A loving family with two young children and an elderly grandmother holding eco-friendly cotton tote bags filled with wholesome pantry staples, organic milk, and fresh citrus inside an open-concept community food hub. Soft morning sunbeams streaming through industrial windows, joyful expressions, deep sage greens and warm ochre tones." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCkVvHpTuZMVXFtmaMThZwuncMrJqXE-9YIu5GjpIsDp7fqmXvhtnC3mSTuZw1E2_gI97Jq2V9FaIk6iZ_V0MW7gfT7kIgWd8bw7P6CNHFBqLKLAn5npxSE4kA5YBe8J6Fg2zIcWWeoLOXVzeH1rKO1K8K8iCnopOlSAxT3PS2YMh3A0HdQ959DitzqeoHCG077PLjCEf0a4FMMO_5uhvRob03Ub02-ONRHhilek5YAAdkITxFj7gM5')">
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/95 via-primary/70 to-primary/40 mix-blend-multiply"></div>
+</div>
+</div>
+<!-- Slide 3 -->
+<div class="hero-slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-0 pointer-events-none">
+<div class="w-full h-full bg-cover bg-center" data-alt="Passionate and energetic group of young and elderly volunteers wearing sage green organic cotton aprons cheerfully sorting farm-fresh produce crates, laughing together in a modern bright community hall. Natural warm daylight, golden warmth, shallow depth of field, authentic candid moments." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAgOhsSYwTkJrEJb5Axr83tZSo_TSju2Uan94ew_4fSKXB4_pb28SOYT81vzVDo2gyUlt2FlaNN91n_37q9-lE0rEI1R58kkFLsm0j16mMKlL2K716lUdG0_xOmI_f8phJvX0gLfNMbAjWZ1YTDjh9cseig-CbQVJ0_o88q_x_oYuc_enSMOcADth3My3hVoQG3c8GDOCtz-qaqTQKHQZakNFzx9bd3tpQRhXGXsW8QcgSIXASjZLKM')">
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/95 via-primary/70 to-primary/40 mix-blend-multiply"></div>
+</div>
+</div>
+<!-- Hero Content Overlay -->
+<div class="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 pt-36 pb-16 lg:pb-24">
+<!-- Top Status Pill -->
+<div class="flex items-center gap-4 mb-6">
+<span class="inline-flex items-center gap-2 bg-surface-container-lowest/20 backdrop-blur-md px-4 py-1.5 rounded-full text-primary-fixed font-label-md text-label-md">
+<span class="w-2 h-2 rounded-full bg-primary-fixed animate-pulse"></span>
+            Downtown East St. Lawrence &amp; Esplanade Ward
+          </span>
+<span class="text-on-primary/70 font-label-md text-label-md tracking-widest uppercase" id="slide-indicator">
+            Slide <span class="text-tertiary-fixed font-bold">01</span> / 03
+          </span>
+</div>
+<!-- Typography & Tagline -->
+<div class="max-w-4xl">
+<h1 class="font-display-hero text-display-hero-mobile md:text-display-hero text-on-primary tracking-tight font-extrabold mb-4 leading-tight">
+            Nourishing Neighbours.<br/>
+<span class="text-tertiary-fixed">Strengthening Our Esplanade.</span>
+</h1>
+<p class="font-body-xl text-body-lg md:text-body-xl text-on-primary/90 max-w-2xl mb-8 leading-relaxed">
+            Dignified, 100% choice-based grocery support and warm community care. Open to all neighbours with zero means-testing and open arms.
+          </p>
+<!-- 3 Prominent Action Buttons -->
+<div class="flex flex-wrap items-center gap-4 mb-12">
+<a class="inline-flex items-center justify-center gap-3 bg-primary-fixed text-on-primary-fixed font-label-lg text-label-lg px-8 py-4 rounded-full font-bold shadow-lg hover:bg-primary-fixed-dim transition-all group" data-path="get-food" href="#">
+<span>Get Food Assistance</span>
+<span class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+<a class="inline-flex items-center justify-center gap-2 bg-tertiary-fixed text-on-tertiary-fixed font-label-lg text-label-lg px-7 py-4 rounded-full font-bold shadow-md hover:bg-tertiary-fixed-dim transition-all" data-path="donate" href="#">
+<span class="material-symbols-outlined text-[20px]">volunteer_activism</span>
+<span>Donate Today</span>
+</a>
+<a class="inline-flex items-center justify-center gap-2 bg-surface-container-lowest/15 backdrop-blur-md text-on-primary font-label-lg text-label-lg px-7 py-4 rounded-full font-bold hover:bg-surface-container-lowest/30 transition-all" data-path="volunteer" href="#">
+<span class="material-symbols-outlined text-[20px]">diversity_1</span>
+<span>Volunteer With Us</span>
+</a>
+</div>
+</div>
+<!-- Interactive Slide Thumbnails & Controls -->
+<div class="pt-6 flex flex-col md:flex-row md:items-center justify-between gap-6">
+<div class="flex items-center gap-3">
+<button class="thumb-btn text-left group px-4 py-2.5 rounded-2xl bg-surface-container-lowest/20 backdrop-blur-md transition-all border-none" onclick="setHeroSlide(0)">
+<span class="text-primary-fixed block font-label-md text-label-md font-bold">01 Fresh Harvest</span>
+<span class="text-on-primary/70 text-xs">Pantry Market Days</span>
+</button>
+<button class="thumb-btn text-left group px-4 py-2.5 rounded-2xl bg-surface-container-lowest/10 backdrop-blur-md transition-all hover:bg-surface-container-lowest/20" onclick="setHeroSlide(1)">
+<span class="text-on-primary/90 block font-label-md text-label-md font-bold">02 Family Dignity</span>
+<span class="text-on-primary/60 text-xs">Nourishing Homes</span>
+</button>
+<button class="thumb-btn text-left group px-4 py-2.5 rounded-2xl bg-surface-container-lowest/10 backdrop-blur-md transition-all hover:bg-surface-container-lowest/20" onclick="setHeroSlide(2)">
+<span class="text-on-primary/90 block font-label-md text-label-md font-bold">03 Volunteer Energy</span>
+<span class="text-on-primary/60 text-xs">Our Community Team</span>
+</button>
+</div>
+<!-- Nav Arrows -->
+<div class="flex items-center gap-3">
+<button aria-label="Previous Slide" class="w-12 h-12 rounded-full bg-surface-container-lowest/20 backdrop-blur-md text-on-primary flex items-center justify-center hover:bg-surface-container-lowest/40 transition-colors" onclick="prevHeroSlide()">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<button aria-label="Next Slide" class="w-12 h-12 rounded-full bg-surface-container-lowest/20 backdrop-blur-md text-on-primary flex items-center justify-center hover:bg-surface-container-lowest/40 transition-colors" onclick="nextHeroSlide()">
+<span class="material-symbols-outlined text-2xl">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: WELCOME & MISSION SPLIT (Layered & Asymmetric) -->
+<section class="w-full py-space-xl bg-surface-container-low relative">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+<!-- Left Editorial Typography -->
+<div class="lg:col-span-5 flex flex-col justify-center">
+<div class="inline-flex items-center gap-2 text-primary font-label-md text-label-md uppercase tracking-widest font-extrabold mb-3">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+            Welcome to Esplanade
+          </div>
+<h2 class="font-headline-xl text-headline-xl text-primary font-extrabold tracking-tight mb-6 leading-tight">
+            A dignified, open-door food sanctuary rooted in love and choice.
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6 leading-relaxed">
+            We believe that good food is an unconditional human right. Since 1994, our neighbourhood food bank has bypassed cold bureaucracy in favour of a vibrant, supermarket-style experience where you pick what your household loves.
+          </p>
+<div class="bg-surface-container p-6 rounded-2xl mb-8">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">shopping_basket</span>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary font-bold mb-1">Dignity First, Always</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">No means tests, no financial questions, and no lineups in the rain. Walk inside, grab a shopping cart, and choose what suits your family’s traditions.</p>
+</div>
+</div>
+</div>
+<div>
+<a class="inline-flex items-center gap-2 font-label-lg text-label-lg text-primary font-bold hover:text-secondary transition-colors" data-path="our-story" href="#">
+<span>Explore our philosophy &amp; neighborhood roots</span>
+<span class="material-symbols-outlined text-[18px]">north_east</span>
+</a>
+</div>
+</div>
+<!-- Right Overlapping Photo Collage -->
+<div class="lg:col-span-7 relative">
+<div class="relative w-full aspect-[4/3] sm:aspect-[16/11]">
+<!-- Base Main Image -->
+<div class="w-4/5 h-4/5 rounded-3xl overflow-hidden shadow-xl">
+<img class="w-full h-full object-cover" data-alt="A diverse young mother and her cheerful daughter picking ripe seasonal red apples together from wooden display stands in an artisanal community grocery pantry. Warm organic natural lighting, lush green background, joyful expression of mutual care and dignity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAq2KdV0vAsEo1AVuE_xXcC5Ayy90azYGGPhSfjIaWJrH6KBqp1Q9bNSg400fnZK_V57t4wLStM8HOKKY-lPxFJsoBMvznKyz5ltyTLXIVu0z-6L9MYYcMozePe3rc299AWGns-K4xeUUyS6uQcCTEMQcDW4_XGlERMz0MyhXre8ZnjZag3BLJYd29haRZqMQztHmKexPvTzoZUQ_9wnUagqCl6RBKGVySIcrN9zuQ7MYmelXA_dUg8"/>
+</div>
+<!-- Overlapping Offset Secondary Image -->
+<div class="absolute bottom-0 right-0 w-3/5 h-3/5 rounded-3xl overflow-hidden shadow-2xl -ml-8">
+<img class="w-full h-full object-cover" data-alt="A warm, smiling middle-aged pantry volunteer wearing an apron, warmly greeting an elderly community member and offering a loaf of sourdough bread, captured candidly in natural sunlight with crisp depth of field and deep earthy forest tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDINoC1aCitApSC9hTl_qH2q9ZnaOpXUl2K2s6x_HnOo_2JBcsCrAR2cO-JVf2diIcD7SCVjJ9DmvRDkXYkzBwSMZwyKwlBrgvUd9UJkHUr_Nc3DZy_SZvX07TCGIeo_G22-oLhbJz8upG8Vn-KxCpdVsy_AmR38LIyjm1QIdM3jl18eJmipvwEBqm-FFrUCEO4P7_gzInIAdJcDFqHOmXogs3KeubRTAwuSKUjdhILOjWiCqI3zo1u"/>
+</div>
+<!-- Rotated Badge Pill -->
+<div class="absolute top-6 right-8 bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md font-bold px-5 py-3 rounded-full shadow-lg transform rotate-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-base">check_circle</span>
+<span>100% Barrier-Free &amp; Choice-Based</span>
+</div>
+<!-- Freshness Guarantee Callout Tile -->
+<div class="absolute -bottom-4 left-6 bg-surface-container-lowest text-on-surface p-4 rounded-2xl shadow-md flex items-center gap-3 max-w-xs">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">eco</span>
+</div>
+<p class="font-label-md text-label-md font-semibold text-primary">Over 70% of all weekly distributions are fresh, farm-rescued produce.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: OUR STORY PREVIEW (Editorial Storytelling Banner) -->
+<section class="w-full bg-primary text-on-primary py-space-xl overflow-hidden">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Giant Atmospheric Candid Inset -->
+<div class="lg:col-span-7 relative rounded-3xl overflow-hidden shadow-2xl group">
+<div class="aspect-[16/10] w-full">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A large panoramic candid view of The Esplanade long community harvest dinner table, crowded with diverse smiling neighbours eating together under warm festoon fairy lights at dusk. Heartfelt communal warmth, rich shadows, rich deep green and harvest amber palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIzuigxs6GHF6sXiwDSxQdhaeSMuDMZHiTbcJeegziEiocr8Cn4DqK0N1RF_HMsXyKgc4zjQbrk5CuYrbVpZZhePWMtMDDqEJ5oSNsRKSL-5scOFoFATXbF2xIxJ17TX5LTc2Zfr9uhttxwkoH8p9KlZ9yPNb5TDXqgjNdP_akr4PiRBY-21xTZVbJZxgmtnZVctkJ9m9vegcK4xH3SGhVVRwJczxj3txmON6h6YLmmHGRfRvDqUr3"/>
+</div>
+<!-- Inset Quote Block -->
+<div class="absolute bottom-6 left-6 right-6 p-6 rounded-2xl bg-on-background/80 backdrop-blur-md text-on-primary">
+<span class="material-symbols-outlined text-tertiary-fixed text-3xl mb-1">format_quote</span>
+<p class="font-headline-sm text-headline-sm italic font-medium leading-snug text-primary-fixed">
+              "No one in our neighbourhood should ever have to choose between paying rent and feeding their family."
+            </p>
+<span class="block mt-2 font-label-md text-label-md text-on-primary/80">— Maria S., Founding Volunteer &amp; 30-Year Esplanade Resident</span>
+</div>
+</div>
+<!-- Short Impact Narrative -->
+<div class="lg:col-span-5 flex flex-col justify-center lg:pl-6">
+<span class="text-tertiary-fixed font-label-md text-label-md uppercase tracking-wider font-extrabold mb-3">Our 30-Year Commitment</span>
+<h2 class="font-headline-xl text-headline-xl text-on-primary font-bold mb-6 leading-tight">
+            Building solidarity, not charity, on every block of The Esplanade.
+          </h2>
+<p class="font-body-lg text-body-lg text-on-primary/80 mb-8 leading-relaxed">
+            What started in 1994 as a modest church-basement dry goods shelf has blossomed into Toronto’s most responsive neighbourhood food cooperative. We cultivate genuine friendships, cook meals together, and advocate tirelessly for systemic food justice.
+          </p>
+<div>
+<a class="inline-flex items-center gap-3 bg-primary-container text-on-primary font-label-lg text-label-lg px-8 py-4 rounded-full font-bold shadow-md hover:bg-surface-tint transition-all group" data-path="our-story" href="#">
+<span>Read Our Full Journey</span>
+<span class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1.5">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: GET FOOD PATHWAY (Visual Step-by-Step) -->
+<section class="w-full py-space-xl bg-surface-container relative">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<!-- Section Header -->
+<div class="max-w-3xl mb-16">
+<span class="text-secondary font-label-md text-label-md font-bold uppercase tracking-wider block mb-2">Accessing Food With Dignity</span>
+<h2 class="font-headline-xl text-headline-xl text-primary font-extrabold tracking-tight mb-3">How We Support You</h2>
+<p class="font-body-xl text-body-xl text-on-surface-variant">Simple, confidential, and choice-first. Here is exactly what happens when you visit us.</p>
+</div>
+<!-- 3 Photographic Step Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+<!-- Step 1 -->
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col">
+<div class="relative aspect-[4/3] w-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A clean, bright welcoming front reception counter at a modern food pantry. A friendly smiling receptionist offering a warm greeting to a community member, soft indoor natural light, no glass barrier, welcoming cafe ambiance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQQk_kseUVnVBrJoVJ7Yy5jeGYGxhRBcjGnOMNd0mXFOItXUjHjaPr3cDcnv2xNuzsYdYQ7E83L1zMpPbRgB9KM0-X5I6R67LvcHPos7KbKMxrVXxfboT9w0rhnFoqIugz4uSWhKpsoie8z0bJUp9m6ExsBR9WHZGcY8H9ORLHeVJep4OsT8x-WNjghj_6q5j5Ho0xb2x4tPuQCmT_4und8o1XbA2tPEC6ZzkZGAeYMIhNpasAurIC"/>
+<div class="absolute top-4 left-4 bg-primary text-on-primary w-10 h-10 rounded-full font-label-lg text-label-lg flex items-center justify-center font-bold">
+              01
+            </div>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold mb-2">Walk In &amp; Say Hello</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">No proof of income, bills, or citizenship needed. Just give us your first name and dietary requirements so we can assist your household.</p>
+</div>
+<div class="mt-4 pt-4 flex items-center gap-2 text-secondary font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-base">lock</span>
+<span>100% Confidential Registration</span>
+</div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col">
+<div class="relative aspect-[4/3] w-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Organized, brightly lit modern grocery market aisles filled with neatly stacked cereal, grains, fresh root vegetables, and colorful cans. Shoppers walking with handheld wicker baskets picking items freely with complete dignity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKpr0oMOiYLrouHbSbwQffUwAtk23JkpevBfpDb_olCIC0tmc3Mgty6mMIUTTqGJB3BIU2lyyi1ecPIGoOStt6vA96wqkT3Esg-3HXqUCusfraWvWObxXozOzlHh3DbRJpYrZ611k7Qrsb5WLQnhFAz1d6j30R_l8hhAkK-Q3V37T-fejW6pPd1Cy4VBipQc0u86CZ-A4JSun6L6iEWmheKhNRNbK-lFJZ4TfsKXK6ukLqP_uk9PjV"/>
+<div class="absolute top-4 left-4 bg-primary text-on-primary w-10 h-10 rounded-full font-label-lg text-label-lg flex items-center justify-center font-bold">
+              02
+            </div>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold mb-2">Shop With Dignity &amp; Choice</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Browse our market aisles just like a neighborhood grocer. Choose culturally appropriate staples, fresh dairy, Halal poultry, and greens you love.</p>
+</div>
+<div class="mt-4 pt-4 flex items-center gap-2 text-secondary font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-base">check</span>
+<span>Personalized Points System</span>
+</div>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col">
+<div class="relative aspect-[4/3] w-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Two sturdy natural canvas grocery bags resting on a polished wooden checkout counter filled with sourdough bread, fresh oranges, leafy kale, cartons of eggs, and cooking oil. Clean, wholesome, and warm composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-SKj6v--8_nwKreBsTsFf-0eE2I5eWabu_gBJz6ZNpplxOGWvUi_3NS-SdWXXZffVkraBA38E9gWBenvm0KuF3HsWtuqcHyM0JqzxLEveM5rf7wyeMGk-k-KexBvSR-8FmCAcRJ0ZVHr0FADE-VaDCXhaY7wWo0nhPrIw8iZrtGvROaLqUXM4IBsjlIPwczY0P8Yr0FmrzHzCDD7_abeNJUx85xBorTtvPBzdF8RYj8s_TBWpk458"/>
+<div class="absolute top-4 left-4 bg-primary text-on-primary w-10 h-10 rounded-full font-label-lg text-label-lg flex items-center justify-center font-bold">
+              03
+            </div>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold mb-2">Take Home Fresh Staples</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Pack your reusable bags with enough nutritious food for 4 to 5 days. We also offer hygiene items, infant diapers, and pet food on request.</p>
+</div>
+<div class="mt-4 pt-4 flex items-center gap-2 text-secondary font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-base">calendar_month</span>
+<span>Visit Bi-Weekly as Needed</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Urgent Assistance & Inclusion Banner -->
+<div class="bg-surface-container-lowest rounded-3xl p-6 lg:p-8 shadow-sm flex flex-col lg:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-5">
+<div class="w-14 h-14 rounded-full bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-3xl">emergency</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">Need Immediate Food Right Now?</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Call our urgent emergency dispatch at <span class="font-bold text-primary">(416) 555-0199</span> or visit during open pantry hours.</p>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-3">
+<span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">volume_off</span> Quiet Sensory Hours: Thursdays 1-3pm
+          </span>
+<span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">accessible</span> Wheelchair Accessible
+          </span>
+<a class="inline-flex items-center justify-center bg-primary text-on-primary font-label-md text-label-md px-6 py-3 rounded-full font-bold hover:bg-primary-container transition-all" data-path="get-food" href="#">
+            Full Service Hours
+          </a>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: PROGRAMS & COMMUNITY SERVICES (Vibrant Photo Grid) -->
+<section class="w-full py-space-xl bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<span class="text-secondary font-label-md text-label-md font-bold uppercase tracking-wider block mb-2">Beyond the Shelf</span>
+<h2 class="font-headline-xl text-headline-xl text-primary font-extrabold tracking-tight">Our Programs in Action</h2>
+</div>
+<a class="inline-flex items-center gap-2 font-label-lg text-label-lg text-primary font-bold hover:text-secondary transition-colors" data-path="programs-and-events" href="#">
+<span>View complete calendar &amp; times</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+</div>
+<!-- Asymmetric Photo Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- 1. Wednesday & Friday Choice Pantry (Large Featured 7-col) -->
+<div class="md:col-span-7 bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm group hover:shadow-xl transition-all relative flex flex-col justify-end min-h-[380px]">
+<div class="absolute inset-0">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A lively walk-in food market interior on a bustling afternoon. Happy shoppers browsing freshly baked artisan loaves and colourful organic vegetables in clean presentation baskets. Warm and inviting documentary style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGBYvlZZdUK-L55fU71XX8x1gY4R66o-uH2KSQfYPnKcgrzsTa5DN87Yx1cGnKHu7Zl93d-ZtrZOMDm4bMN7i1vbIjiH-hvWZOoKDQqhg6Ql8AStgxbeZcfzqCJX1wX_3hx5cyKpv4FQAj88DPh3eVG-os4KpiAGKPzBNd0TKML6g5oK7ZkDUV40xmFcvD12iY29Kgwm79fZfHLyxUeFSoJnwLqrCkRhE2brEwOkIMzdJyQ2z0f3kN"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/90 via-on-background/40 to-transparent"></div>
+</div>
+<div class="relative p-8 z-10 text-on-primary">
+<span class="inline-block bg-primary-fixed text-on-primary-fixed font-label-md text-label-md px-3.5 py-1 rounded-full font-bold mb-3">Core Service</span>
+<h3 class="font-headline-lg text-headline-lg font-bold mb-2">Choice Pantry Walk-In Market</h3>
+<p class="font-body-md text-body-md text-on-primary/90 max-w-xl mb-4">Every Wednesday and Friday. Shop 100+ fresh items, organic dairy, proteins, and personal care products with full privacy.</p>
+<span class="inline-flex items-center gap-2 font-label-md text-label-md text-tertiary-fixed font-bold">
+<span>Wed 10am–4pm • Fri 12pm–6pm</span>
+<span class="material-symbols-outlined text-sm">schedule</span>
+</span>
+</div>
+</div>
+<!-- 2. Saturday Fresh Harvest Market (5-col) -->
+<div class="md:col-span-5 bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm group hover:shadow-xl transition-all relative flex flex-col justify-end min-h-[380px]">
+<div class="absolute inset-0">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A sunlit outdoor Saturday fresh harvest farmers market stall in a park courtyard with wooden trestle tables heaped with organic squash, carrots, beets, and fragrant fresh herbs. Joyful open air gathering." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUEfcBfft9Y5NhxfoHV3c94iQmCFsiYi-Kq-IlsGlYF7_IaXEJafXFhnQRjMb7SUjULPZ3C3Q95NrmdWgtl3NzxONdDaEdfwneTv2szoaw8KmGwhT0qZnKEL50ECYpqTPIXK2BqDp-5ob4shD0QGvoyGTlBFXagUqgwzUOMYhFjqpEKcBfULo7PCRVhjS8pITXph8GTYC4o6bl7iRshMaBk86JxoTQd7tZWPNktThddqb18TGrQnnH"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/90 via-on-background/40 to-transparent"></div>
+</div>
+<div class="relative p-8 z-10 text-on-primary">
+<span class="inline-block bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md px-3.5 py-1 rounded-full font-bold mb-3">Community Outdoor</span>
+<h3 class="font-headline-md text-headline-md font-bold mb-2">Saturday Harvest Market</h3>
+<p class="font-body-md text-body-md text-on-primary/90 mb-4">Direct farm rescue from southern Ontario orchards and organic growers. Fresh fruits, leafy greens, and local honey.</p>
+<span class="inline-flex items-center gap-2 font-label-md text-label-md text-tertiary-fixed font-bold">
+<span>Saturdays 9am–1pm • Esplanade Park</span>
+<span class="material-symbols-outlined text-sm">location_on</span>
+</span>
+</div>
+</div>
+<!-- 3. Baby & Family Care Hub (5-col) -->
+<div class="md:col-span-5 bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm group hover:shadow-xl transition-all relative flex flex-col justify-end min-h-[340px]">
+<div class="absolute inset-0">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A warm, reassuring scene of organized baby care essentials, packs of diapers, infant formulas, gentle baby foods, and soft toddler books arranged lovingly on clean wooden shelves in a community clinic setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDU6_P7kqmrvKeKtkPtUEcWrYyab38C7HQn_jtCc0l96pFn7XlP04biVb5aav9_Xa4J1819nPbHux1Y_IeBXmwfZvoR4DHq9M-0mw2VRqmLCExI6fbSk3oNwmFRhl4gOn9uFhaLZZvhCY0gHx2SQwicaqbehsel_xqJiY5I9zxAuIbn6VzFc8-dkhaCO1ESxl17BylWuCcfrV6M6Z7-TWhfX8C-KB6JAV-H84p0m_ben5jMguxwpyoN"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/90 via-on-background/40 to-transparent"></div>
+</div>
+<div class="relative p-8 z-10 text-on-primary">
+<span class="inline-block bg-secondary-container text-on-secondary-container font-label-md text-label-md px-3.5 py-1 rounded-full font-bold mb-3">Infant &amp; Toddler</span>
+<h3 class="font-headline-md text-headline-md font-bold mb-2">Baby &amp; Family Care Hub</h3>
+<p class="font-body-md text-body-md text-on-primary/90 mb-4">Formula, brand-new diapers (sizes NB to 6), gentle baby food purées, wipes, and lactation support referrals.</p>
+<span class="inline-flex items-center gap-2 font-label-md text-label-md text-primary-fixed font-bold">
+<span>Open every distribution day</span>
+</span>
+</div>
+</div>
+<!-- 4. Senior Mobile Care Deliveries (7-col) -->
+<div class="md:col-span-7 bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm group hover:shadow-xl transition-all relative flex flex-col justify-end min-h-[340px]">
+<div class="absolute inset-0">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A caring volunteer delivering a cardboard box of fresh groceries directly to an elderly gentleman standing warmly at his apartment door in a Toronto residential building, mutual smiles and heartfelt conversation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIjfYBHPty9WWBYTzryetZd8XOYJ7QqOLnANWYRDyuFYMGzunwfpJ1eUni5nJTn47iEQIDv07Nqp_QMSgm4CBbLIiQ81XKSGgJZ7nHIyHVPvXrBuwpHZujLX6YIvsmHd3Ncsev5reKdxzhdfxl1xxnSLg5Crq1XqDDDndIZeWFS03dxR9sSY16eAxR3xnqIwj1QTccrDg-YHn6zcy_o0JuQji3t4FHSN7E78FIb1EPQ1OcNriVtQ1T"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/90 via-on-background/40 to-transparent"></div>
+</div>
+<div class="relative p-8 z-10 text-on-primary">
+<span class="inline-block bg-primary-fixed text-on-primary-fixed font-label-md text-label-md px-3.5 py-1 rounded-full font-bold mb-3">Direct Delivery</span>
+<h3 class="font-headline-lg text-headline-lg font-bold mb-2">Senior &amp; Mobility Home Delivery</h3>
+<p class="font-body-md text-body-md text-on-primary/90 max-w-xl mb-4">Confidential bi-weekly doorstep delivery of pre-customized hampers and easy-to-cook healthy meals for homebound seniors and neighbours with chronic illness.</p>
+<span class="inline-flex items-center gap-2 font-label-md text-label-md text-tertiary-fixed font-bold">
+<span>Tuesdays &amp; Thursdays • Van Dispatch</span>
+<span class="material-symbols-outlined text-sm">local_shipping</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: COMMUNITY IMPACT STATS (Bold Graphic Banner) -->
+<section class="w-full bg-primary text-on-primary py-space-xl relative overflow-hidden">
+<!-- Subtle Ambient Graphic SVG Background -->
+<div class="absolute inset-0 pointer-events-none opacity-10">
+<svg class="w-full h-full" fill="none" preserveaspectratio="none" viewbox="0 0 1000 400">
+<path d="M0,200 C200,100 400,300 600,150 C800,0 1000,200 1200,100 L1200,400 L0,400 Z" fill="currentColor"></path>
+</svg>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-tertiary-fixed font-label-md text-label-md uppercase tracking-wider font-extrabold block mb-2">Real Neighborhood Impact in 2024</span>
+<h2 class="font-headline-xl text-headline-xl font-extrabold text-on-primary">The Numbers Behind Our Table</h2>
+</div>
+<!-- 4 Bold Stat Pillars -->
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<div class="bg-surface-container-lowest/10 backdrop-blur-md p-8 rounded-3xl text-center flex flex-col items-center">
+<span class="material-symbols-outlined text-primary-fixed text-4xl mb-3">restaurant</span>
+<span class="font-display-hero text-display-hero-mobile lg:text-display-hero font-extrabold text-primary-fixed block mb-2">14,800+</span>
+<p class="font-body-md text-body-md text-on-primary/90">Nutritious Meals Prepared &amp; Shared</p>
+</div>
+<div class="bg-surface-container-lowest/10 backdrop-blur-md p-8 rounded-3xl text-center flex flex-col items-center">
+<span class="material-symbols-outlined text-tertiary-fixed text-4xl mb-3">groups</span>
+<span class="font-display-hero text-display-hero-mobile lg:text-display-hero font-extrabold text-tertiary-fixed block mb-2">1,250+</span>
+<p class="font-body-md text-body-md text-on-primary/90">Local Families Supported Every Month</p>
+</div>
+<div class="bg-surface-container-lowest/10 backdrop-blur-md p-8 rounded-3xl text-center flex flex-col items-center">
+<span class="material-symbols-outlined text-secondary-fixed text-4xl mb-3">agriculture</span>
+<span class="font-display-hero text-display-hero-mobile lg:text-display-hero font-extrabold text-secondary-fixed block mb-2">48,000</span>
+<p class="font-body-md text-body-md text-on-primary/90">Pounds of Organic Produce Rescued</p>
+</div>
+<div class="bg-surface-container-lowest/10 backdrop-blur-md p-8 rounded-3xl text-center flex flex-col items-center">
+<span class="material-symbols-outlined text-primary-fixed-dim text-4xl mb-3">favorite</span>
+<span class="font-display-hero text-display-hero-mobile lg:text-display-hero font-extrabold text-primary-fixed-dim block mb-2">320+</span>
+<p class="font-body-md text-body-md text-on-primary/90">Active Community Volunteers</p>
+</div>
+</div>
+<!-- Live Ticker Note -->
+<div class="bg-primary-container p-4 rounded-2xl max-w-xl mx-auto flex items-center justify-center gap-3 text-center">
+<span class="material-symbols-outlined text-tertiary-fixed text-2xl">savings</span>
+<span class="font-label-lg text-label-lg text-on-primary">
+          High Efficiency: <strong class="text-tertiary-fixed">Every $1 donated</strong> provides 3 balanced, wholesome meals.
+        </span>
+</div>
+</div>
+</section>
+<!-- SECTION 7: DONATE SECTION (Interactive Giving Strip & Wishlist) -->
+<section class="w-full py-space-xl bg-surface-container">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Column A: Financial Donation Card -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-8 lg:p-10 rounded-3xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="text-secondary font-label-md text-label-md font-bold uppercase tracking-wider">Direct Community Fuel</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md px-3 py-1 rounded-full font-bold">CRA Tax Deductible</span>
+</div>
+<h3 class="font-headline-xl text-headline-xl text-primary font-extrabold mb-3">Make an Immediate Difference</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">Your contribution directly purchases fresh farm eggs, dairy, whole oats, and fresh produce for Esplanade families.</p>
+<!-- Giving Frequency Toggle -->
+<div class="bg-surface-container p-1 rounded-full flex max-w-sm mb-6">
+<button class="flex-1 py-2.5 rounded-full font-label-md text-label-md font-bold text-center bg-primary text-on-primary transition-all" id="freq-one" onclick="setFrequency('one-time')">
+                Give One-Time
+              </button>
+<button class="flex-1 py-2.5 rounded-full font-label-md text-label-md font-bold text-center text-on-surface-variant hover:text-primary transition-all" id="freq-month" onclick="setFrequency('monthly')">
+                Monthly Sustainer
+              </button>
+</div>
+<!-- Amount Tiles -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+<button class="amount-btn p-4 rounded-2xl bg-surface-container-low text-left transition-all" onclick="selectAmount(25, this)">
+<span class="block font-headline-md text-headline-md text-primary font-bold mb-1">$25</span>
+<span class="block text-xs text-on-surface-variant leading-tight">Fresh milk &amp; eggs for 2 families</span>
+</button>
+<button class="amount-btn active p-4 rounded-2xl bg-primary text-on-primary text-left transition-all shadow-md" onclick="selectAmount(50, this)">
+<span class="block font-headline-md text-headline-md font-bold mb-1 text-on-primary">$50</span>
+<span class="block text-xs text-on-primary/80 leading-tight">Weekly grocery hamper for family of 4</span>
+</button>
+<button class="amount-btn p-4 rounded-2xl bg-surface-container-low text-left transition-all" onclick="selectAmount(100, this)">
+<span class="block font-headline-md text-headline-md text-primary font-bold mb-1">$100</span>
+<span class="block text-xs text-on-surface-variant leading-tight">Fills baby hub with formula &amp; diapers</span>
+</button>
+<button class="amount-btn p-4 rounded-2xl bg-surface-container-low text-left transition-all" onclick="selectAmount(250, this)">
+<span class="block font-headline-md text-headline-md text-primary font-bold mb-1">$250</span>
+<span class="block text-xs text-on-surface-variant leading-tight">Sponsors complete senior van delivery run</span>
+</button>
+</div>
+</div>
+<div>
+<a class="w-full inline-flex items-center justify-center gap-3 bg-primary text-on-primary font-label-lg text-label-lg py-4 rounded-full font-bold shadow-md hover:bg-primary-container transition-all" data-path="donate" href="#">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+<span id="donate-cta-text">Donate $50 Online Securely</span>
+</a>
+<div class="mt-4 flex items-center justify-center gap-6 text-xs text-on-surface-variant">
+<span>Instant CRA Tax Receipt Issued</span>
+<span>•</span>
+<span>Cancel Monthly Anytime</span>
+</div>
+</div>
+</div>
+<!-- Column B: Most-Needed Food Goods Wishlist -->
+<div class="lg:col-span-5 bg-surface-container-lowest p-8 lg:p-10 rounded-3xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 text-secondary font-label-md text-label-md font-bold uppercase tracking-wider mb-2">
+<span class="material-symbols-outlined text-base">inventory_2</span>
+<span>Physical Donations</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-primary font-extrabold mb-3">Most-Needed Goods</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Hosting a food drive or dropping off groceries? Here is what our community shelves require most right now:</p>
+<!-- Checklist -->
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-3 p-3 rounded-2xl bg-surface-container-low">
+<span class="material-symbols-outlined text-secondary text-xl">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">Canned Tuna, Salmon &amp; Sardines</span>
+</li>
+<li class="flex items-center gap-3 p-3 rounded-2xl bg-surface-container-low">
+<span class="material-symbols-outlined text-secondary text-xl">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">Nut Butters &amp; Seed Spreads (Tahini, Sunflower)</span>
+</li>
+<li class="flex items-center gap-3 p-3 rounded-2xl bg-surface-container-low">
+<span class="material-symbols-outlined text-secondary text-xl">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">Infant Formula (Stage 1 &amp; 2) &amp; Diapers (Sz 4-6)</span>
+</li>
+<li class="flex items-center gap-3 p-3 rounded-2xl bg-surface-container-low">
+<span class="material-symbols-outlined text-secondary text-xl">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">Olive Oil, Sunflower Oil &amp; Basmati Rice</span>
+</li>
+<li class="flex items-center gap-3 p-3 rounded-2xl bg-surface-container-low">
+<span class="material-symbols-outlined text-secondary text-xl">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">Halal-Certified Dried Lentils &amp; Chickpeas</span>
+</li>
+</ul>
+</div>
+<div class="bg-surface-container p-5 rounded-2xl">
+<span class="font-label-md text-label-md text-primary font-bold block mb-1">Pantry Loading Dock Drop-off</span>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">120 The Esplanade (Rear Lane). Mon–Fri 9am–5pm. Friendly staff on-site to assist with heavy cartons.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 8: VOLUNTEER COMMUNITY SPOTLIGHT (Energetic Mosaic) -->
+<section class="w-full py-space-xl bg-surface-container-low relative">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Visual Mosaic Left -->
+<div class="lg:col-span-7 grid grid-cols-2 gap-4">
+<div class="rounded-3xl overflow-hidden aspect-[4/5] shadow-md">
+<img class="w-full h-full object-cover" data-alt="Two enthusiastic young volunteers laughing together while packaging fresh organic carrots and beets into sturdy paper bags inside a warm community kitchen. Cheerful atmosphere and natural sunlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCggKVFWCvdtjhJ8Pr0X7v9ntyQ2d7aYRcjPZKL5KG15jcySMzIpPKi3L21HKWnf9pt_0mPycIYityV9How5PT70GkW3qPmm79KyfagJVU9SgfxsFM8teUBNw61MN6gDerNkDrbXD7Yr68EHUW9G8doiuqINzKFaJ-231gAjU0B3J57AlRaLQNL4VS6oYgtHZhxo7Ohg9TzDhf-_aQo81_-FAr3hb5RhIqm4G1VExyszD-gLVjE5CYX"/>
+</div>
+<div class="space-y-4">
+<div class="rounded-3xl overflow-hidden aspect-square shadow-md">
+<img class="w-full h-full object-cover" data-alt="An energetic volunteer loading fresh bakery bread into the back of a clean white community outreach delivery van parked on a leafy Toronto downtown street." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx3uu7D_VH2qDYbvmpvd470wF9ZGO2RG5ULbVuaPkkXr3m9iRFKJIvPptMLVRm1Yte60GWXrdpLtYZ4JX1VMrlr5bpqShJ6XUDAgPjGQGalnigNPIRh-ctyR4ZdJqncthKUFst1clLxTfym_Bdocw4Gi6Q-kr5CLT3dSla-J2Hu0ieQnz1FZbhKioo3Tf6_Zd2rGwCjacIZIV9det8L-Gop1oOssrjZkF_FTqM3HE4mB8yIjWmoe_4"/>
+</div>
+<div class="rounded-3xl overflow-hidden aspect-square shadow-md">
+<img class="w-full h-full object-cover" data-alt="A friendly volunteer smiling warmly as they offer a warm cup of herbal tea to a visitor sitting in a comfortable community pantry reception lounge." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoMZkmiKWixoX0HLIuibT3diC2oAfD7k1B58oJbHw9Fr-wBcBCCt8eWm0110wIzJhdT--KpMjP9G_BOTAzcfuwS4K9Q4VE3gh7T6enkAS0isEMKlGFVatv5wZo1HIE-hBj7F7FkSOEO3C3QfUYRfq9t5-sNJjgyIIl1AqMgQCH2R2qsODMHs_Au-RqD-lYXSCdLj7u11oB-uqJwgTCc1vKYAEghsQ_7nCKDiOrK9A8jsy_tMOHZoxr"/>
+</div>
+</div>
+</div>
+<!-- Action Card Right -->
+<div class="lg:col-span-5 flex flex-col justify-center">
+<span class="text-secondary font-label-md text-label-md uppercase tracking-wider font-extrabold mb-2">Join Our Hands &amp; Hearts</span>
+<h2 class="font-headline-xl text-headline-xl text-primary font-extrabold tracking-tight mb-4 leading-tight">
+            2 hours a week makes a lasting neighborhood impact.
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6 leading-relaxed">
+            Whether you want to unpack morning produce deliveries, greet neighbours at our welcome desk, or drive a weekly senior route, our volunteer team is the beating heart of The Esplanade.
+          </p>
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm mb-8 space-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-2xl">event</span>
+<div>
+<span class="font-label-md text-label-md text-primary font-bold block">Next New Volunteer Orientation</span>
+<span class="font-body-md text-body-md text-on-surface-variant text-sm">Saturday, Nov 8 at 10:30 AM • 45 mins</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-2xl">schedule</span>
+<div>
+<span class="font-label-md text-label-md text-primary font-bold block">Flexible Shift Scheduling</span>
+<span class="font-body-md text-body-md text-on-surface-variant text-sm">Morning, afternoon, and weekend 2-hour slots</span>
+</div>
+</div>
+</div>
+<div>
+<a class="inline-flex items-center justify-center gap-3 bg-primary text-on-primary font-label-lg text-label-lg px-8 py-4 rounded-full font-bold shadow-md hover:bg-primary-container transition-all" data-path="volunteer" href="#">
+<span>Sign Up for a Shift</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 9: COMMUNITY PHOTO GALLERY & NEIGHBOURHOOD MOMENTS -->
+<section class="w-full py-space-xl bg-surface-container">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-secondary font-label-md text-label-md uppercase tracking-wider font-extrabold block mb-2">Life Along The Esplanade</span>
+<h2 class="font-headline-xl text-headline-xl text-primary font-extrabold tracking-tight mb-3">Moments of Connection &amp; Dignity</h2>
+<p class="font-body-xl text-body-xl text-on-surface-variant">Food connects us across every culture, age, and background.</p>
+</div>
+<!-- 6 Curated Photo Feed Masonry Style -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+<!-- Photo 1 -->
+<div class="relative aspect-square rounded-2xl overflow-hidden shadow-sm group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Close up photograph of a rustic wooden crate filled with vibrant organic purple eggplants and heirloom tomatoes under soft market light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdblO31sfxgjY9LTpzFCmLlbKeVh-KUPtYWepSfhSpr5yr1QkKPxz5326PHI0GiZs3xo7tCctbS5E8F1gEp6h98U9cS8bYs9JHmhGcdZ7GOgnRJCvwgAWGIXGneo0tdZ_BRGZ4_5CtQ9jUyI2SbnHhQGAUX49FIImawjjxG50IdbeoqN4jNQ_K2xNvhKbLpLBTAJwG5YHFgDzA3vCK4eIV1U5RrspClXryWMnA05k1BR03yDZ_dllv"/>
+<div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-3 text-center">
+<span class="font-label-md text-label-md text-on-primary font-bold">#FreshMarket</span>
+</div>
+</div>
+<!-- Photo 2 -->
+<div class="relative aspect-square rounded-2xl overflow-hidden shadow-sm group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Two neighbours in a community cooking workshop chopping fresh cilantro and peppers on large butcher block boards, chatting happily." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK_MQvBgUSRFSiuVtzi6sOmJrqpH2Y0dQwtFZigm_ZiKtSeHBd_vse3_qUNBIORhSmXBkI2DEQn_B2gvYieL0Pq2ChB7L7hsw2UuuZ-cCPgq2JGtl6ir5lL-oc_ne3oM2B8FtnxKQ6D18Y0U2n0o1KZRX6id7FDdYTB8C9PbU-FLtU1IHJlvZHX2XvAwdipkiNFqa06EWmaqYkeYEiS3OsLjz_wHSSCDpLikHRpCd_-S_2KhuYIcw2"/>
+<div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-3 text-center">
+<span class="font-label-md text-label-md text-on-primary font-bold">#CommunityKitchen</span>
+</div>
+</div>
+<!-- Photo 3 -->
+<div class="relative aspect-square rounded-2xl overflow-hidden shadow-sm group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A cheerful child proudly showing off a miniature pumpkin and a bag of sweet clementines during the autumn harvest festival." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQimahPXExRLH4emgVqQlfOl7aodOkCreTr82DBYZjrBZ4zAvwHa7pSk1LpD74_hfGucwBaU8f8XjLY6biGaHcl6QEkyv32oG5qCEP6Ljx272Q65bngeT3CJ3IadNS700s-HSIxLHxWfX1FlHSrTy2wypdFS5MG5LVI_QeCl75iZlzoFrU7N1wZRytmVBQ2UOaM2KpWgIw0X6rJ5K1R2CqKKDfMZQazlnT04SFdtqknSNHfoy8PQf-"/>
+<div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-3 text-center">
+<span class="font-label-md text-label-md text-on-primary font-bold">#EsplanadeHarvest</span>
+</div>
+</div>
+<!-- Photo 4 -->
+<div class="relative aspect-square rounded-2xl overflow-hidden shadow-sm group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A dedicated mobile delivery volunteer in a green jacket holding an insulated grocery carrier in the courtyard of a senior apartment complex." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZmcL1Dpl90WDBvGVzQCaAvscpOYuae76JlCCVG3wZH8LL_I4n2eenJ8pxhxnxknZqKITOtc6gFB-znUa7kcRvt8hUvN0vI25EFGeJo0SYDOxgINVdrTYAZKmp8zdVXMeso6NK5lt1EaVZ1o2aN_LutZ3T2vs8oSM4qEJd9nJg1NXS9aoyX38OC6LFMkLHVnqY2tXL8o687Fa4nVEgybQyu-x5Cf5H0OEZNOWtKCvRudN281_nZDG0"/>
+<div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-3 text-center">
+<span class="font-label-md text-label-md text-on-primary font-bold">#SeniorCare</span>
+</div>
+</div>
+<!-- Photo 5 -->
+<div class="relative aspect-square rounded-2xl overflow-hidden shadow-sm group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Freshly baked artisan whole grain sourdough loaves cooling on stainless steel racks in an urban non-profit bakery kitchen." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCx5HtS_RNuKZqZyP2NAmOANFghnu4IcbXxeNmgve1zy1NtriCQWf77xzy9Iv3PTFuMThKp9u69bcFSJSMXoAe_9bKtw1naHs-kEtxvbkKZ2pTjAXadddACd7_i5OtA5Z6Zzr99NDFquxCR70S4snHOFk46rXfm6aztSTdqIHguynfRWxOBQvCBMY2Epq2piw4mo-mKnteCwoM8_73HgxxAEyTEaTveP55VFEUO_76BaR5nvIaTacdj"/>
+<div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-3 text-center">
+<span class="font-label-md text-label-md text-on-primary font-bold">#DailyBread</span>
+</div>
+</div>
+<!-- Photo 6 -->
+<div class="relative aspect-square rounded-2xl overflow-hidden shadow-sm group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Group of diverse volunteers taking a joyful candid selfie in the pantry greenhouse surrounded by vibrant potted herbs and hanging planters." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgG2UjFlEJV9MCpmndAS7znGuk1BzmzKu19TacBDMgCwocfqILaMePD8UU_VlUyPdM0QpezknGLyEp5kn4enVYhLbF4XO5ksdkXLKkwKgi6_oMGMqdisu7T_PM-gNAthjRVGcZcsogLQN9AoZ_zMG3bi9xn43oULsODl0ctsS2oOR8mCVAL2xOewfFwD9tPb3tl3eNONCOh0Hhme-rDXC1OtBecoOryrj2nTTfEMKVaJ7PiS3WASt4"/>
+<div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-3 text-center">
+<span class="font-label-md text-label-md text-on-primary font-bold">#TeamEsplanade</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 10: UPCOMING EVENTS & DISTRIBUTION DATES (Clean Calendar Strip) -->
+<section class="w-full py-space-xl bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<span class="text-secondary font-label-md text-label-md font-bold uppercase tracking-wider block mb-2">Stay Connected</span>
+<h2 class="font-headline-xl text-headline-xl text-primary font-extrabold tracking-tight">Upcoming Pantry Dates &amp; Events</h2>
+</div>
+<a class="inline-flex items-center gap-2 font-label-lg text-label-lg text-primary font-bold hover:text-secondary transition-colors" data-path="programs-and-events" href="#">
+<span>See Monthly Schedule</span>
+<span class="material-symbols-outlined text-[20px]">calendar_today</span>
+</a>
+</div>
+<!-- Schedule Cards Strip -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Event 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-3xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="bg-primary-fixed text-on-primary-fixed font-label-md text-label-md px-3.5 py-1 rounded-full font-bold">This Wednesday</span>
+<span class="material-symbols-outlined text-secondary">storefront</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold mb-2">Choice Market Distribution</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mb-4">Fresh seasonal produce, eggs, milk, pantry staples, and choice bakery items for local residents.</p>
+</div>
+<div class="pt-4 flex items-center justify-between font-label-md text-label-md text-on-surface-variant">
+<span>10:00 AM – 4:00 PM</span>
+<span class="text-primary font-bold">Walk-In • No RSVP</span>
+</div>
+</div>
+<!-- Event 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-3xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md px-3.5 py-1 rounded-full font-bold">Saturday Morning</span>
+<span class="material-symbols-outlined text-tertiary">eco</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold mb-2">Outdoor Fresh Harvest Stand</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mb-4">Rescue produce from regional family farms. Bulk squash, potatoes, apples, and community cider.</p>
+</div>
+<div class="pt-4 flex items-center justify-between font-label-md text-label-md text-on-surface-variant">
+<span>9:00 AM – 1:00 PM</span>
+<span class="text-primary font-bold">Esplanade Park Gazebo</span>
+</div>
+</div>
+<!-- Event 3 -->
+<div class="bg-surface-container-lowest p-6 rounded-3xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="bg-secondary-container text-on-secondary-container font-label-md text-label-md px-3.5 py-1 rounded-full font-bold">Next Tuesday</span>
+<span class="material-symbols-outlined text-secondary">soup_kitchen</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold mb-2">Community Soup &amp; Bread Circle</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mb-4">Free communal lunch and recipe sharing. Learn to make hearty winter minestrone from pantry staples.</p>
+</div>
+<div class="pt-4 flex items-center justify-between font-label-md text-label-md text-on-surface-variant">
+<span>12:00 PM – 2:00 PM</span>
+<span class="text-primary font-bold">Community Kitchen</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 11: INTERACTIVE FAQ & NEWSLETTER -->
+<section class="w-full py-space-xl bg-surface-container relative">
+<div class="max-w-4xl mx-auto px-6 lg:px-12">
+<!-- FAQ Accordion -->
+<div class="text-center mb-12">
+<span class="text-secondary font-label-md text-label-md uppercase tracking-wider font-extrabold block mb-2">Common Questions</span>
+<h2 class="font-headline-xl text-headline-xl text-primary font-extrabold tracking-tight">Everything You Need to Know</h2>
+</div>
+<div class="space-y-4 mb-16">
+<!-- FAQ 1 -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm">
+<button class="w-full flex items-center justify-between text-left font-headline-sm text-headline-sm text-primary font-bold" onclick="toggleFaq(this)">
+<span>Do I need to show income statements or ID to receive food?</span>
+<span class="material-symbols-outlined text-2xl transition-transform">expand_more</span>
+</button>
+<div class="faq-content hidden pt-4 font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            No. We never ask for tax returns, pay stubs, bank statements, or proof of immigration status. We simply record a first name and household count to ensure we allocate sufficient food supplies for everyone.
+          </div>
+</div>
+<!-- FAQ 2 -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm">
+<button class="w-full flex items-center justify-between text-left font-headline-sm text-headline-sm text-primary font-bold" onclick="toggleFaq(this)">
+<span>How often can my household visit the pantry?</span>
+<span class="material-symbols-outlined text-2xl transition-transform">expand_more</span>
+</button>
+<div class="faq-content hidden pt-4 font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Households are welcome to receive full grocery hampers once every 14 days. However, our Saturday Fresh Harvest produce stand is open to all neighbours weekly with no restriction.
+          </div>
+</div>
+<!-- FAQ 3 -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm">
+<button class="w-full flex items-center justify-between text-left font-headline-sm text-headline-sm text-primary font-bold" onclick="toggleFaq(this)">
+<span>Can I request Halal, Kosher, or diabetic-friendly food?</span>
+<span class="material-symbols-outlined text-2xl transition-transform">expand_more</span>
+</button>
+<div class="faq-content hidden pt-4 font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Yes! Because our pantry operates as a choice-based grocery market, you select items that match your family's religious, medical, and personal dietary needs. We keep certified Halal meats, Kosher certified canned goods, gluten-free grains, and low-sodium options clearly marked.
+          </div>
+</div>
+<!-- FAQ 4 -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm">
+<button class="w-full flex items-center justify-between text-left font-headline-sm text-headline-sm text-primary font-bold" onclick="toggleFaq(this)">
+<span>How does senior home delivery work?</span>
+<span class="material-symbols-outlined text-2xl transition-transform">expand_more</span>
+</button>
+<div class="faq-content hidden pt-4 font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            If you or a loved one are 65+ or living with a mobility challenge in the St. Lawrence / Esplanade postal codes (M5E, M5A), our volunteer drivers can deliver customized food hampers right to your apartment door every other Tuesday. Call (416) 555-0199 to register.
+          </div>
+</div>
+</div>
+<!-- High-Contrast Newsletter Banner -->
+<div class="bg-primary text-on-primary rounded-3xl p-8 lg:p-12 shadow-xl relative overflow-hidden">
+<div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="max-w-md text-left">
+<span class="text-tertiary-fixed font-label-md text-label-md uppercase tracking-wider font-extrabold block mb-2">The Esplanade Gazette</span>
+<h3 class="font-headline-lg text-headline-lg font-bold text-on-primary mb-2">Stay Connected with Our Harvest</h3>
+<p class="font-body-md text-body-md text-on-primary/80">Monthly updates on food rescue totals, volunteer orientation dates, seasonal recipes, and neighborhood events.</p>
+</div>
+<form class="w-full md:w-auto flex flex-col sm:flex-row gap-3 shrink-0" onsubmit="handleNewsletter(event)">
+<input class="px-5 py-3.5 rounded-full bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary-fixed min-w-[280px]" placeholder="Enter your email address" required="" type="email"/>
+<button class="bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md font-bold px-6 py-3.5 rounded-full hover:bg-tertiary-fixed-dim transition-colors whitespace-nowrap" type="submit">
+              Stay Connected
+            </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- INLINE CLIENT SCRIPT -->
+<script>
+    // Hero Slideshow Controller
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.hero-slide');
+    const indicator = document.getElementById('slide-indicator');
+    const thumbBtns = document.querySelectorAll('.thumb-btn');
+
+    function updateHero() {
+      slides.forEach((slide, index) => {
+        if (index === currentSlide) {
+          slide.classList.remove('opacity-0', 'pointer-events-none');
+          slide.classList.add('opacity-100');
+        } else {
+          slide.classList.remove('opacity-100');
+          slide.classList.add('opacity-0', 'pointer-events-none');
+        }
+      });
+
+      if (indicator) {
+        indicator.innerHTML = 'Slide <span class="text-tertiary-fixed font-bold">0' + (currentSlide + 1) + '</span> / 0' + slides.length;
+      }
+
+      thumbBtns.forEach((btn, index) => {
+        if (index === currentSlide) {
+          btn.classList.add('bg-surface-container-lowest/20');
+          btn.classList.remove('bg-surface-container-lowest/10');
+        } else {
+          btn.classList.remove('bg-surface-container-lowest/20');
+          btn.classList.add('bg-surface-container-lowest/10');
+        }
+      });
+    }
+
+    function setHeroSlide(idx) {
+      currentSlide = idx;
+      updateHero();
+    }
+
+    function nextHeroSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      updateHero();
+    }
+
+    function prevHeroSlide() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      updateHero();
+    }
+
+    // Auto rotate hero every 8s
+    let heroInterval = setInterval(nextHeroSlide, 8000);
+
+    // Donation Amount Controller
+    let selectedDonation = 50;
+    let donationFrequency = 'one-time';
+
+    function setFrequency(freq) {
+      donationFrequency = freq;
+      const oneBtn = document.getElementById('freq-one');
+      const monBtn = document.getElementById('freq-month');
+
+      if (freq === 'one-time') {
+        oneBtn.classList.add('bg-primary', 'text-on-primary');
+        oneBtn.classList.remove('text-on-surface-variant');
+        monBtn.classList.remove('bg-primary', 'text-on-primary');
+        monBtn.classList.add('text-on-surface-variant');
+      } else {
+        monBtn.classList.add('bg-primary', 'text-on-primary');
+        monBtn.classList.remove('text-on-surface-variant');
+        oneBtn.classList.remove('bg-primary', 'text-on-primary');
+        oneBtn.classList.add('text-on-surface-variant');
+      }
+      updateDonateText();
+    }
+
+    function selectAmount(amt, el) {
+      selectedDonation = amt;
+      document.querySelectorAll('.amount-btn').forEach(btn => {
+        btn.classList.remove('bg-primary', 'text-on-primary', 'shadow-md');
+        btn.classList.add('bg-surface-container-low');
+        const h = btn.querySelector('span:first-child');
+        const p = btn.querySelector('span:last-child');
+        if (h) h.classList.replace('text-on-primary', 'text-primary');
+        if (p) p.classList.replace('text-on-primary/80', 'text-on-surface-variant');
+      });
+
+      el.classList.add('bg-primary', 'text-on-primary', 'shadow-md');
+      el.classList.remove('bg-surface-container-low');
+      const h = el.querySelector('span:first-child');
+      const p = el.querySelector('span:last-child');
+      if (h) h.classList.replace('text-primary', 'text-on-primary');
+      if (p) p.classList.replace('text-on-surface-variant', 'text-on-primary/80');
+
+      updateDonateText();
+    }
+
+    function updateDonateText() {
+      const cta = document.getElementById('donate-cta-text');
+      if (cta) {
+        cta.textContent = 'Donate $' + selectedDonation + (donationFrequency === 'monthly' ? '/Month' : '') + ' Online Securely';
+      }
+    }
+
+    // Interactive Accordion
+    function toggleFaq(btn) {
+      const content = btn.nextElementSibling;
+      const icon = btn.querySelector('.material-symbols-outlined');
+      const isHidden = content.classList.contains('hidden');
+
+      // Close all other faqs
+      document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+      document.querySelectorAll('.faq-content').forEach(c => {
+        const prev = c.previousElementSibling.querySelector('.material-symbols-outlined');
+        if (prev) prev.style.transform = 'rotate(0deg)';
+      });
+
+      if (isHidden) {
+        content.classList.remove('hidden');
+        if (icon) icon.style.transform = 'rotate(180deg)';
+      } else {
+        content.classList.add('hidden');
+        if (icon) icon.style.transform = 'rotate(0deg)';
+      }
+    }
+
+    function handleNewsletter(e) {
+      e.preventDefault();
+      const input = e.target.querySelector('input');
+      if (input) {
+        const val = input.value;
+        input.value = '';
+        alert('Thank you for subscribing to The Esplanade Food Bank updates!');
+      }
+    }
+  </script>
+</div></main><footer class="w-full bg-primary text-on-primary rounded-t-xl mt-space-xl overflow-hidden"><div class="bg-primary-container text-on-primary py-space-lg"><div class="max-w-7xl mx-auto px-6 lg:px-12"><div class="grid grid-cols-1 md:grid-cols-3 gap-6"><div class="bg-surface-container-lowest/10 backdrop-blur-md p-6 rounded-lg flex flex-col justify-between items-start"><span class="font-headline-sm text-headline-sm font-bold text-primary-fixed">Get Food Assistance</span><p class="font-body-md text-body-md text-on-primary/90 mt-2 mb-4">Dignified, confidential, and immediate food support for local families and seniors.</p><a class="font-label-md text-label-md bg-primary-fixed text-on-primary-fixed px-5 py-2.5 rounded-full font-bold hover:bg-primary-fixed-dim transition-colors" data-path="get-food" href="#">Register for Hamper</a></div><div class="bg-surface-container-lowest/10 backdrop-blur-md p-6 rounded-lg flex flex-col justify-between items-start"><span class="font-headline-sm text-headline-sm font-bold text-tertiary-fixed">Donate Funds or Food</span><p class="font-body-md text-body-md text-on-primary/90 mt-2 mb-4">Every $1 provides 3 wholesome meals. Direct distribution to neighbourhood families.</p><a class="font-label-md text-label-md bg-tertiary-fixed text-on-tertiary-fixed px-5 py-2.5 rounded-full font-bold hover:bg-tertiary-fixed-dim transition-colors" data-path="donate" href="#">Make a Donation</a></div><div class="bg-surface-container-lowest/10 backdrop-blur-md p-6 rounded-lg flex flex-col justify-between items-start"><span class="font-headline-sm text-headline-sm font-bold text-secondary-fixed">Become a Volunteer</span><p class="font-body-md text-body-md text-on-primary/90 mt-2 mb-4">Join our packing, greenhouse, and mobile delivery shifts. Friendly community teams.</p><a class="font-label-md text-label-md bg-secondary-fixed text-on-secondary-fixed px-5 py-2.5 rounded-full font-bold hover:bg-secondary-fixed-dim transition-colors" data-path="volunteer" href="#">Join the Team</a></div></div></div></div><div class="max-w-7xl mx-auto px-6 lg:px-12 py-space-xl"><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 text-on-primary/80"><div class="lg:col-span-2"><div class="flex items-center gap-3 mb-4"><img alt="logo.jpeg" class="h-8 w-auto object-contain brightness-200" src="https://lh3.googleusercontent.com/aida/AEtjO1XqkGhrXcWfrjlh4PkxY0A1fqM3HiLgYfH8jFfwuNIOBkQMzf8LKfCBr5WaLd8wS72EULKGTWEZbT8JCwvKMpVDerrJFb8S6ciFbaWAepNsC6VoTdZ63lSyPi8M7pRzjFFwCFYn2n_E0SpLSAojzuL35Wwpw0nrzqknBMC-XP-yf-jVFzQw6sHPoeCZ_G3nmTgkhIA9ZuB4aXfIdIl196_gppVzaXq_txeytRqcgZs6ycUoGke0af0FBGkzjKSlmWW_HhR_0eoL"/><span class="font-headline-md text-headline-md text-on-primary font-bold">Esplanade Food Bank</span></div><p class="font-body-md text-body-md text-on-primary/80 max-w-sm mb-4">Nourishing our neighbours with care, fresh produce, and community mutual aid since 1994.</p><div class="flex items-center gap-2 text-on-primary-container font-label-md text-label-md"><span class="material-symbols-outlined text-base">verified</span><span>Registered Canadian Charity #89234 1120 RR0001</span></div></div><div><span class="font-label-lg text-label-lg text-on-primary block font-bold mb-4">Quick Navigation</span><ul class="space-y-2 font-label-md text-label-md"><li><a class="hover:text-primary-fixed transition-colors" data-path="home" href="#">Home</a></li><li><a class="hover:text-primary-fixed transition-colors" data-path="our-story" href="#">Our Story &amp; Mission</a></li><li><a class="hover:text-primary-fixed transition-colors" data-path="programs-and-events" href="#">Programs &amp; Pantry Schedule</a></li><li><a class="hover:text-primary-fixed transition-colors" data-path="contact" href="#">Contact &amp; Directions</a></li></ul></div><div><span class="font-label-lg text-label-lg text-on-primary block font-bold mb-4">Programs</span><ul class="space-y-2 font-label-md text-label-md"><li><a class="hover:text-primary-fixed transition-colors" data-path="programs-and-events" href="#">Pantry Walk-in Market</a></li><li><a class="hover:text-primary-fixed transition-colors" data-path="programs-and-events" href="#">Senior Home Delivery</a></li><li><a class="hover:text-primary-fixed transition-colors" data-path="programs-and-events" href="#">Community Kitchen &amp; Meal Prep</a></li><li><a class="hover:text-primary-fixed transition-colors" data-path="programs-and-events" href="#">Fresh Harvest Garden Project</a></li></ul></div><div><span class="font-label-lg text-label-lg text-on-primary block font-bold mb-4">Direct Assistance</span><div class="space-y-2 font-body-md text-body-md"><p class="text-on-primary font-bold">120 The Esplanade, Toronto, ON</p><p>Urgent Line: (416) 555-0199</p><p>help@esplanadefoodbank.org</p><p class="font-label-md text-label-md text-on-primary-container mt-2">Wheelchair Accessible &amp; Transit Friendly</p></div></div></div><div class="mt-space-lg pt-6 flex flex-col md:flex-row items-center justify-between text-on-primary/60 font-label-md text-label-md gap-4"><p>© 2025 Esplanade Community Food Bank. Dignity in every harvest.</p><div class="flex items-center gap-6"><a class="hover:text-on-primary transition-colors" data-path="contact" href="#">Accessibility Statement</a><a class="hover:text-on-primary transition-colors" data-path="contact" href="#">Privacy Policy</a><a class="hover:text-on-primary transition-colors" data-path="contact" href="#">Annual Impact Report</a></div></div></div></footer></body></html>

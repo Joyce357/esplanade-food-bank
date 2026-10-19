@@ -1,0 +1,270 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #094425;
+  --color-primary-container: #265c3a;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #99d2a7;
+  --color-primary-fixed: #b6f0c3;
+  --color-primary-fixed-dim: #9ad4a9;
+  --color-on-primary-fixed: #00210e;
+  --color-on-primary-fixed-variant: #195130;
+  
+  --color-secondary: #39693b;
+  --color-secondary-container: #b8edb3;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #3e6d3e;
+  --color-secondary-fixed: #baf0b6;
+  --color-secondary-fixed-dim: #9fd49b;
+  --color-on-secondary-fixed: #002105;
+  --color-on-secondary-fixed-variant: #215025;
+  
+  --color-tertiary: #503600;
+  --color-tertiary-container: #6e4b00;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-container: #f9ba4c;
+  --color-tertiary-fixed: #ffdead;
+  --color-tertiary-fixed-dim: #fabc4d;
+  --color-on-tertiary-fixed: #281900;
+  --color-on-tertiary-fixed-variant: #604100;
+  
+  --color-surface: #effdf0;
+  --color-surface-dim: #d0ded1;
+  --color-surface-bright: #effdf0;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #e9f7eb;
+  --color-surface-container: #e3f2e5;
+  --color-surface-container-high: #deecdf;
+  --color-surface-container-highest: #d8e6da;
+  --color-surface-variant: #d8e6da;
+  --color-surface-tint: #336946;
+  
+  --color-on-surface: #121e17;
+  --color-on-surface-variant: #414941;
+  --color-inverse-surface: #27332b;
+  --color-inverse-on-surface: #e6f4e8;
+  --color-inverse-primary: #9ad4a9;
+  
+  --color-outline: #717971;
+  --color-outline-variant: #c0c9bf;
+  
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+  
+  --color-background: #effdf0;
+  --color-on-background: #121e17;
+
+  --radius-sm: 0.5rem;
+  --radius-DEFAULT: 1rem;
+  --radius-md: 1.5rem;
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+  --radius-full: 9999px;
+
+  --spacing-space-xs: 0.375rem;
+  --spacing-space-sm: 0.75rem;
+  --spacing-space-md: 1.25rem;
+  --spacing-space-lg: 2rem;
+  --spacing-space-xl: 3.5rem;
+  --spacing-gutter: 1.5rem;
+  --spacing-gutter-desktop: 2rem;
+  --spacing-margin: 1.25rem;
+  --spacing-margin-tablet: 2rem;
+  --spacing-margin-desktop: 3rem;
+}
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #effdf0;
+    color: #121e17;
+  }
+}
+
+/* Material Symbols Icon helper */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'liga';
+}
+
+/* Typography Utility Classes matching DESIGN.md */
+.font-display-hero {
+  font-weight: 800;
+}
+.text-display-hero {
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -0.02em;
+}
+.text-display-hero-mobile {
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.015em;
+}
+
+.font-headline-xl {
+  font-weight: 700;
+}
+.text-headline-xl {
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: -0.015em;
+}
+.text-headline-xl-mobile {
+  font-size: 26px;
+  line-height: 34px;
+  letter-spacing: -0.01em;
+}
+
+.font-headline-lg {
+  font-weight: 700;
+}
+.text-headline-lg {
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -0.01em;
+}
+
+.font-headline-md {
+  font-weight: 600;
+}
+.text-headline-md {
+  font-size: 22px;
+  line-height: 30px;
+}
+
+.font-headline-sm {
+  font-weight: 600;
+}
+.text-headline-sm {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.font-body-xl {
+  font-weight: 400;
+}
+.text-body-xl {
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.font-body-lg {
+  font-weight: 400;
+}
+.text-body-lg {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.font-body-md {
+  font-weight: 500;
+}
+.text-body-md {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.font-label-lg {
+  font-weight: 700;
+}
+.text-label-lg {
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+}
+
+.font-label-md {
+  font-weight: 700;
+}
+.text-label-md {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.03em;
+}
+
+/* =========================================================================
+   Interactive UI/UX Utilities (Card Hover-Lift & Button Responses)
+   ========================================================================= */
+
+.card-hover-lift {
+  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 300ms cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 300ms ease;
+  will-change: transform, box-shadow;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card-hover-lift:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 30px -10px rgba(9, 68, 37, 0.14), 
+                0 10px 15px -5px rgba(9, 68, 37, 0.08);
+  }
+}
+
+.btn-interactive {
+  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 200ms cubic-bezier(0.16, 1, 0.3, 1), 
+              background-color 200ms ease,
+              opacity 200ms ease;
+  will-change: transform, box-shadow;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-interactive:hover:not(:disabled) {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 10px 20px -5px rgba(9, 68, 37, 0.22), 
+                0 4px 6px -2px rgba(9, 68, 37, 0.12);
+  }
+}
+
+.btn-interactive:active:not(:disabled) {
+  transform: translateY(0px) scale(0.97) !important;
+  box-shadow: 0 2px 4px rgba(9, 68, 37, 0.1) !important;
+}
+
+.btn-interactive:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.btn-interactive:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .card-hover-lift,
+  .card-hover-lift:hover,
+  .btn-interactive,
+  .btn-interactive:hover,
+  .btn-interactive:active {
+    transform: none !important;
+    transition: none !important;
+  }
+}
