@@ -5,6 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { HERO_SLIDES, HeroAction } from "@/data/slides";
 
+const AUTO_ADVANCE_MS = 6000;
+
 function subscribeReducedMotion(callback: () => void) {
   if (typeof window === "undefined") return () => {};
   const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -23,14 +25,43 @@ function getReducedMotionServerSnapshot() {
   return false;
 }
 
+function subscribeVisibility(callback: () => void) {
+  if (typeof document === "undefined") return () => {};
+  document.addEventListener("visibilitychange", callback);
+  return () => document.removeEventListener("visibilitychange", callback);
+}
+
+function getVisibilitySnapshot() {
+  return typeof document !== "undefined" && document.hidden;
+}
+
+function getVisibilityServerSnapshot() {
+  return false;
+}
+
 export default function HeroSlideshow() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const [isFocused, setIsFocused] = useState(false);
+
   const prefersReducedMotion = useSyncExternalStore(
     subscribeReducedMotion,
     getReducedMotionSnapshot,
     getReducedMotionServerSnapshot
   );
+
+  const isDocumentHidden = useSyncExternalStore(
+    subscribeVisibility,
+    getVisibilitySnapshot,
+    getVisibilityServerSnapshot
+  );
+
+  const isPaused = isHovered || isFocused || isDocumentHidden;
+
+  const goToSlide = useCallback((index: number) => {
+    const total = HERO_SLIDES.length;
+    setCurrentSlide(((index % total) + total) % total);
+  }, []);
 
   const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
@@ -40,12 +71,22 @@ export default function HeroSlideshow() {
     setCurrentSlide((prev) => (prev - 1 + HERO_SLIDES.length) % HERO_SLIDES.length);
   }, []);
 
-  // Auto-advance every 8 seconds unless hovered, focused, or reduced-motion enabled
+  // Resetting timeout per slide prevents overlapping timers and skipped slides after manual navigation
   useEffect(() => {
     if (isPaused || prefersReducedMotion) return;
-    const interval = setInterval(nextSlide, 8000);
-    return () => clearInterval(interval);
-  }, [isPaused, prefersReducedMotion, nextSlide]);
+    const timer = window.setTimeout(nextSlide, AUTO_ADVANCE_MS);
+    return () => window.clearTimeout(timer);
+  }, [currentSlide, isPaused, prefersReducedMotion, nextSlide]);
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLElement>) => {
+    if (e.key === "ArrowRight") {
+      e.preventDefault();
+      nextSlide();
+    } else if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      prevSlide();
+    }
+  };
 
   const activeSlide = HERO_SLIDES[currentSlide];
 
@@ -104,39 +145,54 @@ export default function HeroSlideshow() {
   return (
     <section
       className="relative w-full overflow-hidden bg-primary -mt-20"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
+      onPointerEnter={(e) => {
+        if (e.pointerType === "mouse") setIsHovered(true);
+      }}
+      onPointerLeave={(e) => {
+        if (e.pointerType === "mouse") setIsHovered(false);
+      }}
+      onFocusCapture={() => setIsFocused(true)}
+      onBlurCapture={(e) => {
+        if (!e.currentTarget.contains(e.relatedTarget as Node | null)) {
+          setIsFocused(false);
+        }
+      }}
+      onKeyDown={handleKeyDown}
+      aria-roledescription="carousel"
       aria-label="Community Hero Slideshow"
     >
       <div className="relative w-full min-h-[580px] sm:min-h-[640px] md:min-h-[700px] lg:min-h-[760px] flex items-end">
-        {/* Slides Background Layers */}
-        {HERO_SLIDES.map((slide, index) => {
-          const isActive = index === currentSlide;
-          return (
-            <div
-              key={slide.id}
-              className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ${
-                isActive ? "opacity-100 z-0" : "opacity-0 pointer-events-none -z-10"
-              }`}
-              aria-hidden={!isActive}
-            >
-              <div className="relative w-full h-full">
-                <Image
-                  src={slide.imageUrl}
-                  alt={slide.alt}
-                  fill
-                  priority={index === 0}
-                  sizes="100vw"
-                  className="object-cover"
-                  style={{ objectPosition: slide.objectPosition || "center center" }}
-                />
-                {/* Dual duotone ambient overlay for clear text contrast and Warm Canopy aesthetic */}
-                <div className="absolute inset-0 bg-gradient-to-t from-on-background/95 via-primary/75 to-primary/45 mix-blend-multiply" />
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/40 to-primary/60" />
+        {/* Slides Background Layers (positive z-index inside z-0 wrapper prevents flashing behind bg-primary) */}
+        <div className="absolute inset-0 z-0">
+          {HERO_SLIDES.map((slide, index) => {
+            const isActive = index === currentSlide;
+            return (
+              <div
+                key={slide.id}
+                className={`absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out ${
+                  isActive ? "opacity-100 z-[2]" : "opacity-0 z-[1] pointer-events-none"
+                }`}
+                aria-hidden={!isActive}
+              >
+                <div className="relative w-full h-full">
+                  <Image
+                    src={slide.imageUrl}
+                    alt={slide.alt}
+                    fill
+                    priority={index === 0}
+                    loading="eager"
+                    sizes="100vw"
+                    className="object-cover"
+                    style={{ objectPosition: slide.objectPosition || "center center" }}
+                  />
+                  {/* Dual duotone ambient overlay for clear text contrast and Warm Canopy aesthetic */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-on-background/95 via-primary/75 to-primary/45 mix-blend-multiply" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/40 to-primary/60" />
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
 
         {/* Hero Content Overlay */}
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 pt-28 sm:pt-32 lg:pt-36 pb-10 sm:pb-12 lg:pb-16">
@@ -184,7 +240,7 @@ export default function HeroSlideshow() {
                     type="button"
                     role="tab"
                     aria-selected={isActive}
-                    onClick={() => setCurrentSlide(index)}
+                    onClick={() => goToSlide(index)}
                     className={`card-hover-lift text-left px-3 sm:px-4 py-2 sm:py-2.5 rounded-2xl backdrop-blur-md border cursor-pointer ${
                       isActive
                         ? "bg-surface-container-lowest/25 border-primary-fixed/60 shadow-md"
@@ -207,7 +263,7 @@ export default function HeroSlideshow() {
             </div>
 
             {/* Prev / Next Arrow Controls */}
-            <div className="flex items-center justify-start sm:justify-end gap-3 w-full md:w-auto">
+            <div className="flex items-center justify-start sm:justify-end gap-3 w-full md:w-auto shrink-0">
               <button
                 type="button"
                 aria-label="Previous Slide"

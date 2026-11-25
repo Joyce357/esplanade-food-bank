@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 import { GALLERY_ITEMS } from "@/data/content";
 
@@ -40,6 +41,19 @@ export default function CommunityGallery() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* View Full Gallery CTA */}
+        <div className="mt-12 text-center">
+          <Link
+            href="/gallery"
+            className="inline-flex items-center justify-center gap-2.5 bg-primary text-on-primary font-label-lg text-label-lg px-8 py-4 rounded-full font-bold shadow-md hover:bg-primary-container transition-all group btn-interactive"
+          >
+            <span>View Full Gallery</span>
+            <span className="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1">
+              photo_library
+            </span>
+          </Link>
         </div>
       </div>
     </section>

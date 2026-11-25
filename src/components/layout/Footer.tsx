@@ -86,8 +86,11 @@ export default function Footer() {
                 Esplanade Community Food Bank
               </span>
             </div>
-            <p className="font-headline-sm text-base text-primary-fixed font-semibold mb-2">
+            <p className="font-headline-sm text-base text-primary-fixed font-semibold mb-1.5">
               Nourishing Our Neighbours. Building a Stronger Community.
+            </p>
+            <p className="font-label-md text-xs sm:text-sm text-tertiary-fixed font-bold tracking-wide mb-3">
+              Fighting Food Insecurity, Together.
             </p>
             <p className="font-body-md text-body-md text-on-primary/80 max-w-sm mb-4 leading-relaxed">
               Neighbours Feeding Neighbours.
@@ -133,6 +136,11 @@ export default function Footer() {
                   className="hover:text-primary-fixed transition-colors"
                 >
                   Programs
+                </Link>
+              </li>
+              <li>
+                <Link href="/gallery" className="hover:text-primary-fixed transition-colors">
+                  Gallery
                 </Link>
               </li>
               <li>

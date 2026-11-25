@@ -317,7 +317,67 @@ export const SITE_MEDIA: Record<string, MediaAsset> = {
     caption: "Neighbours and volunteers gathered around stocked food tables in the community room",
     category: "community",
     orientation: "landscape",
-    preferredSection: "Our Story (Chapter 6)",
+    preferredSection: "Our Story (Chapter 6), Full Gallery",
+    objectPosition: "center center",
+  },
+
+  freshCauliflowerAndCitrus: {
+    id: "freshCauliflowerAndCitrus",
+    src: "/images/WhatsApp Image 2026-11-05 at 6.31.49 PM.jpeg",
+    alt: "Boxes of fresh cauliflower, oranges, lemons, and beverage cartons lined up along a long community food table",
+    title: "Fresh Produce & Citrus",
+    caption: "Boxes of fresh cauliflower, citrus fruit, and beverages ready for neighbours",
+    category: "pantry",
+    orientation: "portrait",
+    preferredSection: "Full Gallery",
+    objectPosition: "center center",
+  },
+
+  volunteersWithOatDrinks: {
+    id: "volunteersWithOatDrinks",
+    src: "/images/WhatsApp Image 2026-11-05 at 7.53.12 PM.jpeg",
+    alt: "Two smiling community members standing together in the hall holding oat beverage cartons and groceries",
+    title: "Neighbours Sharing a Smile",
+    caption: "Warm moments shared between neighbours and volunteers",
+    category: "community",
+    orientation: "portrait",
+    preferredSection: "Full Gallery",
+    objectPosition: "center 25%",
+  },
+
+  sunlitCommunityRoomTables: {
+    id: "sunlitCommunityRoomTables",
+    src: "/images/WhatsApp Image 2026-11-05 at 7.53.13 PM (5).jpeg",
+    alt: "Bright sunlit community room with tables arranged with cartons of eggs, bread, beverages, and fresh produce",
+    title: "Sunlit Community Space",
+    caption: "Tables prepared with fresh eggs, bread, and essentials in the sunlit hall",
+    category: "pantry",
+    orientation: "landscape",
+    preferredSection: "Full Gallery",
+    objectPosition: "center center",
+  },
+
+  volunteerArrangingTables: {
+    id: "volunteerArrangingTables",
+    src: "/images/WhatsApp Image 2026-11-05 at 7.53.13 PM (1).jpeg",
+    alt: "Volunteer carefully arranging canned vegetables and pantry items on round tables by the sunlit windows",
+    title: "Preparing the Tables",
+    caption: "Careful table setup ahead of welcoming neighbours",
+    category: "volunteers",
+    orientation: "landscape",
+    preferredSection: "Full Gallery",
+    objectPosition: "center 35%",
+  },
+
+  peanutButterAndCannedSoups: {
+    id: "peanutButterAndCannedSoups",
+    src: "/images/WhatsApp Image 2026-11-05 at 6.31.47 PM.jpeg",
+    alt: "Rows of peanut butter jars, canned soups, beans, and pantry sauces neatly arranged on a distribution table",
+    title: "Everyday Pantry Essentials",
+    caption: "Peanut butter, canned soups, and household staples neatly organized",
+    category: "staples",
+    orientation: "landscape",
+    preferredSection: "Full Gallery",
     objectPosition: "center center",
   },
 
@@ -370,3 +430,40 @@ export const SITE_MEDIA: Record<string, MediaAsset> = {
     duplicateOf: "seniorsAndNeighboursHall",
   },
 };
+
+export type GalleryFilterGroup = "all" | "community" | "volunteers" | "provisions";
+
+export type GalleryLayoutVariant = "featured" | "wide" | "tall" | "standard";
+
+export interface FullGalleryPhoto {
+  asset: MediaAsset;
+  filterGroup: Exclude<GalleryFilterGroup, "all">;
+  layout: GalleryLayoutVariant;
+}
+
+export const FULL_GALLERY_PHOTOS: FullGalleryPhoto[] = [
+  { asset: SITE_MEDIA.communityHallGathering, filterGroup: "community", layout: "featured" },
+  { asset: SITE_MEDIA.volunteersWithOatDrinks, filterGroup: "community", layout: "tall" },
+  { asset: SITE_MEDIA.freshProduceAndBeverages, filterGroup: "provisions", layout: "standard" },
+  { asset: SITE_MEDIA.communityFamiliesSmile, filterGroup: "community", layout: "standard" },
+  { asset: SITE_MEDIA.volunteersAtDryGoodsTable, filterGroup: "volunteers", layout: "wide" },
+  { asset: SITE_MEDIA.communityProduceAndPasta, filterGroup: "community", layout: "featured" },
+  { asset: SITE_MEDIA.freshCauliflowerAndCitrus, filterGroup: "provisions", layout: "tall" },
+  { asset: SITE_MEDIA.bakeryAndSnackTable, filterGroup: "provisions", layout: "standard" },
+  { asset: SITE_MEDIA.volunteersSortingGroceries, filterGroup: "volunteers", layout: "standard" },
+  { asset: SITE_MEDIA.seniorsAndNeighboursHall, filterGroup: "community", layout: "wide" },
+  { asset: SITE_MEDIA.communityTeamAtTables, filterGroup: "community", layout: "featured" },
+  { asset: SITE_MEDIA.volunteerHallSetup, filterGroup: "volunteers", layout: "tall" },
+  { asset: SITE_MEDIA.stapleNoodlesRicePasta, filterGroup: "provisions", layout: "standard" },
+  { asset: SITE_MEDIA.breakfastCerealsAndSnacks, filterGroup: "provisions", layout: "standard" },
+  { asset: SITE_MEDIA.neighboursAtDistributionTables, filterGroup: "community", layout: "wide" },
+  { asset: SITE_MEDIA.longDistributionTable, filterGroup: "provisions", layout: "tall" },
+  { asset: SITE_MEDIA.volunteerWelcomingAtTable, filterGroup: "volunteers", layout: "wide" },
+  { asset: SITE_MEDIA.cannedPeasAndBeans, filterGroup: "provisions", layout: "standard" },
+  { asset: SITE_MEDIA.snackPacksAndCrackers, filterGroup: "provisions", layout: "standard" },
+  { asset: SITE_MEDIA.sunlitCommunityRoomTables, filterGroup: "provisions", layout: "wide" },
+  { asset: SITE_MEDIA.communityRoomSuperfoods, filterGroup: "community", layout: "standard" },
+  { asset: SITE_MEDIA.volunteerArrangingTables, filterGroup: "volunteers", layout: "standard" },
+  { asset: SITE_MEDIA.peanutButterAndCannedSoups, filterGroup: "provisions", layout: "standard" },
+  { asset: SITE_MEDIA.specialtyNutritionAndTreats, filterGroup: "provisions", layout: "standard" },
+];

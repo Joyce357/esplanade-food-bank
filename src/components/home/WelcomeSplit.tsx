@@ -14,9 +14,12 @@ export default function WelcomeSplit() {
               <span className="w-2.5 h-2.5 rounded-full bg-secondary" />
               Why We Are Here
             </div>
-            <h2 className="font-headline-xl text-headline-xl text-primary font-extrabold tracking-tight mb-6 leading-tight">
+            <h2 className="font-headline-xl text-headline-xl text-primary font-extrabold tracking-tight mb-3 leading-tight">
               Food Is a Bridge to Connection.
             </h2>
+            <p className="font-headline-sm text-base sm:text-lg text-secondary font-bold mb-5">
+              Fighting Food Insecurity, Together.
+            </p>
             <p className="font-body-lg text-body-lg text-on-surface-variant mb-6 leading-relaxed">
               Esplanade Community Food Bank works to relieve the effects of poverty and food insecurity by sharing nutritious food, healthy snacks, and compassionate support with individuals and families in need. Our work is grounded in respect, inclusion, and the belief that everyone deserves to feel seen.
             </p>
