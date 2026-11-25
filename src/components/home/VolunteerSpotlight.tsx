@@ -33,12 +33,12 @@ export default function VolunteerSpotlight() {
               </div>
               <div className="rounded-3xl overflow-hidden aspect-square shadow-md relative border-2 border-surface-container-lowest">
                 <Image
-                  src={SITE_MEDIA.snackPacksAndCrackers.src}
-                  alt={SITE_MEDIA.snackPacksAndCrackers.alt}
+                  src={SITE_MEDIA.volunteersSortingGroceries.src}
+                  alt={SITE_MEDIA.volunteersSortingGroceries.alt}
                   fill
                   sizes="(max-width: 1024px) 50vw, 25vw"
                   className="object-cover"
-                  style={{ objectPosition: "center center" }}
+                  style={{ objectPosition: SITE_MEDIA.volunteersSortingGroceries.objectPosition || "center 35%" }}
                 />
               </div>
             </div>

@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
 @theme {
+  --font-plus-jakarta: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-sans: var(--font-plus-jakarta);
+
   --color-primary: #094425;
   --color-primary-container: #265c3a;
   --color-on-primary: #ffffff;
@@ -81,6 +84,7 @@
     padding: 0;
     background-color: #effdf0;
     color: #121e17;
+    font-family: var(--font-plus-jakarta);
   }
 }
 

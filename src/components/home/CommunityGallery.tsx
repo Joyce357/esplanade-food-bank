@@ -31,6 +31,7 @@ export default function CommunityGallery() {
                 fill
                 sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 16vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
+                style={{ objectPosition: item.objectPosition || "center center" }}
               />
               <div className="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-3 text-center">
                 <span className="font-label-md text-xs sm:text-label-md text-on-primary font-bold">

@@ -110,14 +110,18 @@ export default function ContactPage() {
               <div className="bg-surface-container-lowest p-8 rounded-3xl shadow-sm border border-surface-container space-y-6 card-hover-lift">
                 <div>
                   <span className="font-label-md text-label-md text-secondary uppercase tracking-wider font-bold block mb-1">
-                    Pantry Location
+                    Official Address
                   </span>
                   <h2 className="font-headline-sm text-headline-sm text-primary font-bold">
-                    {CONTACT_INFO.address}
+                    {CONTACT_INFO.buildingName}
                   </h2>
-                  <span className="text-xs text-on-surface-variant/80 block mt-1">
-                    {CONTACT_INFO.addressStatus} (St. Lawrence Ward) • Facility access coordinated upon inquiry
-                  </span>
+                  <p className="font-body-md text-body-md text-primary font-semibold mt-0.5 leading-snug">
+                    {CONTACT_INFO.streetAddress}
+                    <br />
+                    {CONTACT_INFO.cityProvincePostal}
+                    <br />
+                    {CONTACT_INFO.country}
+                  </p>
                 </div>
 
                 <div className="border-t border-surface-container pt-4">
@@ -138,11 +142,14 @@ export default function ContactPage() {
                   <span className="font-label-md text-label-md text-secondary uppercase tracking-wider font-bold block mb-1">
                     Email Inquiries
                   </span>
-                  <p className="font-body-lg text-body-lg text-primary font-semibold">
+                  <a
+                    href={`mailto:${CONTACT_INFO.email}`}
+                    className="font-body-lg text-body-lg text-primary font-semibold hover:underline block"
+                  >
                     {CONTACT_INFO.email}
-                  </p>
+                  </a>
                   <span className="text-xs text-on-surface-variant/80 block mt-1">
-                    {CONTACT_INFO.emailStatus}
+                    Official inbox for general inquiries, volunteer applications, and community coordination
                   </span>
                 </div>
 

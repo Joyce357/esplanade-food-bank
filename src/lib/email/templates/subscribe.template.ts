@@ -41,9 +41,10 @@ export function renderSubscriberOptInEmail(
       </p>
     </div>
 
-    <div style="background: #f7fafc; padding: 16px 24px; border-top: 1px solid #e2e8f0; font-size: 12px; color: #a0aec0; text-align: center;">
-      <p style="margin: 0 0 6px 0;">Esplanade Community Food Bank • Downtown East Toronto</p>
-      <p style="margin: 0;">
+    <div style="background: #f7fafc; padding: 16px 24px; border-top: 1px solid #e2e8f0; font-size: 12px; color: #718096; text-align: center; line-height: 1.5;">
+      <p style="margin: 0 0 4px 0; font-weight: 600; color: #094425;">Esplanade Community Food Bank</p>
+      <p style="margin: 0 0 6px 0;">David B. Archer Co-operative, 7 Jenoves Place, Toronto, Ontario, M5A 4A6, Canada • <a href="mailto:EsplanadeFoodbank@gmail.com" style="color: #094425;">EsplanadeFoodbank@gmail.com</a></p>
+      <p style="margin: 0; font-size: 11px; color: #a0aec0;">
         Want to stop receiving emails? <a href="${unsubscribeUrl}" style="color: #718096; text-decoration: underline;">Unsubscribe safely here</a>.
       </p>
     </div>
@@ -60,6 +61,14 @@ Thank you for subscribing (${email}). You will receive updates on seasonal food 
 
 To unsubscribe at any time, visit:
 ${unsubscribeUrl}
+
+--
+Esplanade Community Food Bank
+David B. Archer Co-operative
+7 Jenoves Place
+Toronto, Ontario, M5A 4A6
+Canada
+Email: EsplanadeFoodbank@gmail.com
   `.trim();
 
   return { html, text };

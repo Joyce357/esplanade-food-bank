@@ -8,20 +8,19 @@ import { NAV_LINKS } from "@/data/navigation";
 
 export default function Navbar() {
   const pathname = usePathname();
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [openPathname, setOpenPathname] = useState<string | null>(null);
+  const mobileMenuOpen = openPathname === pathname;
+  const setMobileMenuOpen = (open: boolean) => {
+    setOpenPathname(open ? pathname : null);
+  };
   const menuRef = useRef<HTMLDivElement>(null);
   const toggleButtonRef = useRef<HTMLButtonElement>(null);
-
-  // Close mobile drawer on route change
-  useEffect(() => {
-    setMobileMenuOpen(false);
-  }, [pathname]);
 
   // Escape key support
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape" && mobileMenuOpen) {
-        setMobileMenuOpen(false);
+        setOpenPathname(null);
         toggleButtonRef.current?.focus();
       }
     };

@@ -60,7 +60,7 @@ export default function GetFoodPage() {
         }
         setErrorMsg(
           data.message ||
-            "Unable to submit assistance inquiry. For urgent emergency food help, call 211 Toronto."
+            "Unable to submit assistance inquiry. Please check the fields or try again later."
         );
         return;
       }
@@ -74,7 +74,7 @@ export default function GetFoodPage() {
     } catch (err) {
       console.error("Submission failed:", err);
       setErrorMsg(
-        "Network connection error. For immediate food assistance, please call 211 Toronto (free, 24/7 community dispatch)."
+        "Network connection error. Please verify your connection or try again later."
       );
     } finally {
       setLoading(false);
@@ -96,27 +96,6 @@ export default function GetFoodPage() {
           <p className="font-body-xl text-body-lg md:text-body-xl text-on-primary/90 max-w-3xl leading-relaxed">
             If you or your family are experiencing food insecurity, Esplanade Community Food Bank is committed to helping neighbours find compassionate support. Reach out to ask about current food assistance arrangements.
           </p>
-        </div>
-      </section>
-
-      {/* Emergency Urgent Bar */}
-      <section className="bg-error-container text-on-error-container py-5 border-y border-error/20">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <span className="material-symbols-outlined text-3xl">emergency</span>
-            <span className="font-label-lg text-label-lg font-bold">
-              In urgent need of emergency food support right now?
-            </span>
-          </div>
-          <div className="font-label-md text-label-md flex flex-wrap items-center gap-2">
-            <span>Call 211 Toronto (free, 24/7 community dispatch) or submit an inquiry below</span>
-            <a
-              href="#assistance-inquiry"
-              className="underline font-bold hover:text-primary transition-colors ml-1"
-            >
-              Get Assistance
-            </a>
-          </div>
         </div>
       </section>
 
@@ -200,7 +179,7 @@ export default function GetFoodPage() {
                 Ask About Food Assistance
               </h2>
               <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
-                Share only the information needed for the team to respond. Do not submit emergency medical information through this form.
+                Share only the information needed for our team to coordinate assistance. Please do not submit medical or sensitive identification numbers.
               </p>
             </div>
 

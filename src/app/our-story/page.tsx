@@ -335,6 +335,20 @@ export default function OurStoryPage() {
                   That simple phrase became the foundation of everything we do.
                 </p>
               </div>
+
+              <div className="relative aspect-[16/10] rounded-3xl overflow-hidden shadow-md border border-surface-container my-6">
+                <Image
+                  src={SITE_MEDIA.neighboursAtDistributionTables.src}
+                  alt={SITE_MEDIA.neighboursAtDistributionTables.alt}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 65vw"
+                  className="object-cover"
+                  style={{ objectPosition: SITE_MEDIA.neighboursAtDistributionTables.objectPosition || "center center" }}
+                />
+                <div className="absolute bottom-3 left-3 right-3 bg-on-background/80 backdrop-blur-xs text-on-primary text-xs p-2.5 rounded-xl">
+                  Neighbours and volunteers gathered around stocked food tables in the community room.
+                </div>
+              </div>
             </div>
           </article>
 
@@ -352,19 +366,35 @@ export default function OurStoryPage() {
               Understanding the Needs of Seniors
             </h2>
 
-            <div className="space-y-4 font-body-lg text-body-lg text-on-surface leading-relaxed mb-8">
-              <p>
-                In 2022, our family experienced another profound loss when my mother passed away. Shortly afterward, my father came to live with us. Caring for him gave me a new perspective on the challenges many seniors face every day.
-              </p>
-              <p>
-                As I prepared meals, attended appointments, and spent time with the people I had known since childhood—now older adults living on fixed incomes—I heard stories of impossible decisions. Rising rent, increasing grocery prices, expensive medications, and the growing cost of living were leaving many seniors vulnerable.
-              </p>
-              <p>
-                The same neighbourhood that had taught me the importance of community now needed that community more than ever.
-              </p>
-              <p className="font-semibold text-primary">
-                That realization inspired me to formalize the work I had already been doing for years.
-              </p>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-8">
+              <div className="lg:col-span-7 space-y-4 font-body-lg text-body-lg text-on-surface leading-relaxed">
+                <p>
+                  In 2022, our family experienced another profound loss when my mother passed away. Shortly afterward, my father came to live with us. Caring for him gave me a new perspective on the challenges many seniors face every day.
+                </p>
+                <p>
+                  As I prepared meals, attended appointments, and spent time with the people I had known since childhood—now older adults living on fixed incomes—I heard stories of impossible decisions. Rising rent, increasing grocery prices, expensive medications, and the growing cost of living were leaving many seniors vulnerable.
+                </p>
+                <p>
+                  The same neighbourhood that had taught me the importance of community now needed that community more than ever.
+                </p>
+                <p className="font-semibold text-primary">
+                  That realization inspired me to formalize the work I had already been doing for years.
+                </p>
+              </div>
+
+              <div className="lg:col-span-5 relative aspect-[4/3] rounded-3xl overflow-hidden shadow-md border border-surface-container">
+                <Image
+                  src={SITE_MEDIA.seniorsAndNeighboursHall.src}
+                  alt={SITE_MEDIA.seniorsAndNeighboursHall.alt}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-cover"
+                  style={{ objectPosition: SITE_MEDIA.seniorsAndNeighboursHall.objectPosition || "center 22%" }}
+                />
+                <div className="absolute bottom-2 left-2 right-2 bg-on-background/80 backdrop-blur-xs text-on-primary text-[11px] p-2 rounded-xl">
+                  Neighbours and older adults connecting in the community space.
+                </div>
+              </div>
             </div>
           </article>
 

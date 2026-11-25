@@ -11,7 +11,8 @@ export const CONTACT_TOPICS = [
 
 export const contactSchema = z.object({
   fullName: z
-    .string({ required_error: "Full name is required" })
+    .string({ error: "Full name is required" })
+    .max(200, "Name cannot exceed 100 characters")
     .transform(sanitizeText)
     .pipe(
       z
@@ -20,20 +21,27 @@ export const contactSchema = z.object({
         .max(100, "Name cannot exceed 100 characters")
     ),
   email: z
-    .string({ required_error: "Email address is required" })
+    .string({ error: "Email address is required" })
+    .max(254, "Email address is too long")
     .transform(sanitizeEmail)
-    .pipe(z.string().email("Please provide a valid email address")),
+    .pipe(
+      z
+        .string()
+        .max(254, "Email address is too long")
+        .email("Please provide a valid email address")
+    ),
   phone: z
     .string()
+    .max(50, "Phone number is too long")
     .optional()
-    .transform(sanitizePhone)
+    .transform((val) => (val ? sanitizePhone(val) : undefined))
     .pipe(z.string().max(30, "Phone number is too long").optional()),
-  topic: z
-    .enum(CONTACT_TOPICS, {
-      errorMap: () => ({ message: "Please select an inquiry topic" }),
-    }),
+  topic: z.enum(CONTACT_TOPICS, {
+    error: "Please select an inquiry topic",
+  }),
   message: z
-    .string({ required_error: "Message is required" })
+    .string({ error: "Message is required" })
+    .max(5000, "Message cannot exceed 3,000 characters")
     .transform(sanitizeText)
     .pipe(
       z
@@ -44,11 +52,12 @@ export const contactSchema = z.object({
   // Honeypot field - must remain empty
   website_url_hp: z
     .string()
+    .max(200)
     .optional()
     .refine((val) => !val || val.length === 0, {
       message: "Spam detection triggered",
     }),
-  turnstileToken: z.string().optional(),
+  turnstileToken: z.string().max(4096).optional(),
 });
 
 export type ContactFormData = z.infer<typeof contactSchema>;

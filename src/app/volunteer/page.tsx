@@ -104,19 +104,19 @@ export default function VolunteerPage() {
       {/* Authentic Volunteer Photos Spotlight */}
       <section className="py-space-md bg-surface-container border-b border-surface-container-high/60">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
             <div className="relative aspect-[16/10] rounded-3xl overflow-hidden shadow-md border-2 border-surface-container-lowest card-hover-lift">
               <Image
                 src={SITE_MEDIA.volunteersAtDryGoodsTable.src}
                 alt={SITE_MEDIA.volunteersAtDryGoodsTable.alt}
                 fill
-                sizes="(max-width: 768px) 100vw, 50vw"
+                sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover"
                 style={{ objectPosition: SITE_MEDIA.volunteersAtDryGoodsTable.objectPosition || "center 25%" }}
               />
-              <div className="absolute bottom-3 left-3 right-3 bg-on-background/85 backdrop-blur-md text-on-primary text-xs p-3 rounded-2xl border border-surface-container-lowest/15 flex items-center justify-between">
-                <span>Welcoming neighbours at our dry goods distribution table</span>
-                <span className="text-secondary font-bold uppercase tracking-wider text-[11px] hidden sm:inline-block">In Community</span>
+              <div className="absolute bottom-3 left-3 right-3 bg-on-background/85 backdrop-blur-md text-on-primary text-xs p-3 rounded-2xl border border-surface-container-lowest/15 flex items-center justify-between gap-2">
+                <span>Welcoming neighbours at our dry goods table</span>
+                <span className="text-secondary font-bold uppercase tracking-wider text-[11px] hidden lg:inline-block shrink-0">In Community</span>
               </div>
             </div>
 
@@ -125,13 +125,28 @@ export default function VolunteerPage() {
                 src={SITE_MEDIA.volunteerHallSetup.src}
                 alt={SITE_MEDIA.volunteerHallSetup.alt}
                 fill
-                sizes="(max-width: 768px) 100vw, 50vw"
+                sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover"
                 style={{ objectPosition: SITE_MEDIA.volunteerHallSetup.objectPosition || "center 30%" }}
               />
-              <div className="absolute bottom-3 left-3 right-3 bg-on-background/85 backdrop-blur-md text-on-primary text-xs p-3 rounded-2xl border border-surface-container-lowest/15 flex items-center justify-between">
-                <span>Behind-the-scenes distribution preparation in the hall</span>
-                <span className="text-secondary font-bold uppercase tracking-wider text-[11px] hidden sm:inline-block">Preparation</span>
+              <div className="absolute bottom-3 left-3 right-3 bg-on-background/85 backdrop-blur-md text-on-primary text-xs p-3 rounded-2xl border border-surface-container-lowest/15 flex items-center justify-between gap-2">
+                <span>Behind-the-scenes preparation in the hall</span>
+                <span className="text-secondary font-bold uppercase tracking-wider text-[11px] hidden lg:inline-block shrink-0">Preparation</span>
+              </div>
+            </div>
+
+            <div className="relative aspect-[16/10] rounded-3xl overflow-hidden shadow-md border-2 border-surface-container-lowest card-hover-lift">
+              <Image
+                src={SITE_MEDIA.volunteerWelcomingAtTable.src}
+                alt={SITE_MEDIA.volunteerWelcomingAtTable.alt}
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover"
+                style={{ objectPosition: SITE_MEDIA.volunteerWelcomingAtTable.objectPosition || "center 30%" }}
+              />
+              <div className="absolute bottom-3 left-3 right-3 bg-on-background/85 backdrop-blur-md text-on-primary text-xs p-3 rounded-2xl border border-surface-container-lowest/15 flex items-center justify-between gap-2">
+                <span>Stocked tables ready to welcome neighbours</span>
+                <span className="text-secondary font-bold uppercase tracking-wider text-[11px] hidden lg:inline-block shrink-0">Hospitality</span>
               </div>
             </div>
           </div>

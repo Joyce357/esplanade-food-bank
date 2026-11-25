@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { CONTACT_INFO } from "@/data/navigation";
 
 export default function Footer() {
   return (
@@ -94,6 +95,20 @@ export default function Footer() {
             <p className="text-xs text-on-primary/70 leading-relaxed max-w-md">
               Serving neighbours facing food insecurity with dignity, compassion, and respect in downtown Toronto.
             </p>
+            <div className="mt-4 pt-3 border-t border-surface-container-lowest/15 text-xs text-on-primary/80 space-y-1">
+              <p>
+                <span className="font-semibold text-primary-fixed">Location:</span> {CONTACT_INFO.buildingName}
+              </p>
+              <p>
+                <span className="font-semibold text-primary-fixed">Address:</span> {CONTACT_INFO.streetAddress}, {CONTACT_INFO.cityProvincePostal}, {CONTACT_INFO.country}
+              </p>
+              <p>
+                <span className="font-semibold text-primary-fixed">Email:</span>{" "}
+                <a href={`mailto:${CONTACT_INFO.email}`} className="hover:underline text-primary-fixed font-medium">
+                  {CONTACT_INFO.email}
+                </a>
+              </p>
+            </div>
           </div>
 
           {/* Quick Navigation (Strictly Approved Items) */}
@@ -160,9 +175,6 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
-            <div className="mt-6 pt-4 border-t border-surface-container-lowest/15 text-xs text-on-primary/70">
-              <p>For urgent food support across Toronto, call 211 (free, 24/7 community dispatch).</p>
-            </div>
           </div>
         </div>
 

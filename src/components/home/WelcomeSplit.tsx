@@ -69,8 +69,8 @@ export default function WelcomeSplit() {
               {/* Overlapping Offset Secondary Image */}
               <div className="absolute bottom-0 right-0 w-3/5 h-3/5 rounded-3xl overflow-hidden shadow-2xl -ml-8 border-4 border-surface-container-lowest">
                 <Image
-                  src={SITE_MEDIA.breakfastCerealsAndSnacks.src}
-                  alt={SITE_MEDIA.breakfastCerealsAndSnacks.alt}
+                  src={SITE_MEDIA.freshProduceAndBeverages.src}
+                  alt={SITE_MEDIA.freshProduceAndBeverages.alt}
                   fill
                   sizes="(max-width: 1024px) 60vw, 35vw"
                   className="object-cover"

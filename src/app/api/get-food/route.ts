@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { getFoodSchema } from "@/lib/validation/get-food.schema";
 import { checkRateLimit, getClientIp } from "@/lib/security/rate-limit";
+import { parseJsonBodyWithLimit } from "@/lib/security/request-body";
 import { verifyTurnstileToken } from "@/lib/security/turnstile";
 import { saveFoodAssistanceRecord } from "@/lib/db/repository";
 import { sendEmail } from "@/lib/email/resend";
@@ -21,7 +22,7 @@ export async function POST(req: Request) {
       return NextResponse.json(
         {
           success: false,
-          message: `Too many inquiries from this network connection. Please try again in ${rateLimit.retryAfterSeconds || 60} seconds, or call 211 Toronto for immediate assistance.`,
+          message: `Too many inquiries from this network connection. Please try again in ${rateLimit.retryAfterSeconds || 60} seconds.`,
         },
         {
           status: 429,
@@ -32,16 +33,15 @@ export async function POST(req: Request) {
       );
     }
 
-    // Parse JSON body safely
-    let body: unknown;
-    try {
-      body = await req.json();
-    } catch {
+    // Parse JSON body safely with strict size limit (16 KB)
+    const parsedBody = await parseJsonBodyWithLimit(req, 16 * 1024);
+    if (!parsedBody.ok) {
       return NextResponse.json(
-        { success: false, message: "Invalid request payload. Expected JSON." },
-        { status: 400 }
+        { success: false, message: parsedBody.message },
+        { status: parsedBody.status }
       );
     }
+    const body = parsedBody.data;
 
     // 2. Honeypot check - silently drop bots
     if (
@@ -60,7 +60,7 @@ export async function POST(req: Request) {
     const validationResult = getFoodSchema.safeParse(body);
     if (!validationResult.success) {
       const fieldErrors: Record<string, string[]> = {};
-      validationResult.error.errors.forEach((err) => {
+      validationResult.error.issues.forEach((err) => {
         const path = err.path.join(".");
         if (!fieldErrors[path]) fieldErrors[path] = [];
         fieldErrors[path].push(err.message);
@@ -105,7 +105,7 @@ export async function POST(req: Request) {
     // 6. Minimal Confidential Email Alert
     // Full dietary and household information is strictly NOT transmitted over email
     const recipient =
-      process.env.FOOD_ASSISTANCE_ALERT_EMAIL || process.env.FOOD_ASSISTANCE_INBOX_EMAIL;
+      process.env.FOOD_ASSISTANCE_ALERT_EMAIL || process.env.FOOD_ASSISTANCE_INBOX_EMAIL || "EsplanadeFoodbank@gmail.com";
 
     let emailResult = { sent: false, previewMode: true };
 
@@ -139,7 +139,7 @@ export async function POST(req: Request) {
       {
         success: false,
         message:
-          "An unexpected server error occurred. For immediate food assistance, please call 211 Toronto (free, 24/7 community dispatch).",
+          "An unexpected server error occurred. Please try again later.",
       },
       { status: 500 }
     );

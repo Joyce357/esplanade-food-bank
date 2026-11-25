@@ -144,7 +144,7 @@ export async function saveFoodAssistanceRecord(
       referenceId: "",
       createdAt: new Date().toISOString(),
       previewMode: false,
-      error: "Intake registration database is currently offline. For urgent emergency food assistance, please call 211 Toronto.",
+      error: "Intake registration database is currently offline. Please try again later.",
     };
   }
 

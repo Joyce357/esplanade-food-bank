@@ -19,7 +19,8 @@ export const DIETARY_PREFERENCES = [
 
 export const getFoodSchema = z.object({
   fullName: z
-    .string({ required_error: "Full name is required" })
+    .string({ error: "Full name is required" })
+    .max(200, "Name cannot exceed 100 characters")
     .transform(sanitizeText)
     .pipe(
       z
@@ -28,15 +29,16 @@ export const getFoodSchema = z.object({
         .max(100, "Name cannot exceed 100 characters")
     ),
   householdSize: z.enum(HOUSEHOLD_SIZES, {
-    errorMap: () => ({ message: "Please select your household size" }),
+    error: "Please select your household size",
   }),
   dietaryPreferences: z
-    .array(z.string())
+    .array(z.string().max(100, "Selection is too long"))
     .max(10, "Too many selections")
     .optional()
     .default([]),
   contactInfo: z
-    .string({ required_error: "Phone number or email is required" })
+    .string({ error: "Phone number or email is required" })
+    .max(250, "Contact information is too long")
     .transform(sanitizeText)
     .pipe(
       z
@@ -55,11 +57,12 @@ export const getFoodSchema = z.object({
   // Honeypot field
   website_url_hp: z
     .string()
+    .max(200)
     .optional()
     .refine((val) => !val || val.length === 0, {
       message: "Spam detection triggered",
     }),
-  turnstileToken: z.string().optional(),
+  turnstileToken: z.string().max(4096).optional(),
 });
 
 export type GetFoodFormData = z.infer<typeof getFoodSchema>;

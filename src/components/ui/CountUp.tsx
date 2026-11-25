@@ -13,9 +13,17 @@ export default function CountUp({
   duration = 1800,
   className = "",
 }: CountUpProps) {
-  const [displayValue, setDisplayValue] = useState<string>(value);
+  const [animatedState, setAnimatedState] = useState<{
+    sourceValue: string;
+    display: string;
+  } | null>(null);
   const elementRef = useRef<HTMLSpanElement>(null);
   const hasAnimatedRef = useRef(false);
+
+  const displayValue =
+    animatedState && animatedState.sourceValue === value
+      ? animatedState.display
+      : value;
 
   useEffect(() => {
     // Check for reduced motion preference
@@ -24,7 +32,6 @@ export default function CountUp({
       window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     if (prefersReducedMotion) {
-      setDisplayValue(value);
       return;
     }
 
@@ -34,7 +41,6 @@ export default function CountUp({
 
     if (!match) {
       // If it's a non-numeric string (e.g. "1 in 10" or "[Pending]"), display as-is
-      setDisplayValue(value);
       return;
     }
 
@@ -44,11 +50,11 @@ export default function CountUp({
     const targetNumber = parseFloat(rawNumberStr);
 
     if (isNaN(targetNumber)) {
-      setDisplayValue(value);
       return;
     }
 
     const isInteger = !rawNumberStr.includes(".");
+    let rafId: number | null = null;
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -74,16 +80,21 @@ export default function CountUp({
                     maximumFractionDigits: 1,
                   });
 
-              setDisplayValue(`${prefix}${formattedNumber}${suffix}`);
-
               if (progress < 1) {
-                requestAnimationFrame(animate);
+                setAnimatedState({
+                  sourceValue: value,
+                  display: `${prefix}${formattedNumber}${suffix}`,
+                });
+                rafId = requestAnimationFrame(animate);
               } else {
-                setDisplayValue(value); // ensure exact target formatting at end
+                setAnimatedState({
+                  sourceValue: value,
+                  display: value, // ensure exact target formatting at end
+                });
               }
             };
 
-            requestAnimationFrame(animate);
+            rafId = requestAnimationFrame(animate);
           }
         });
       },
@@ -98,6 +109,9 @@ export default function CountUp({
 
     return () => {
       observer.disconnect();
+      if (rafId !== null) {
+        cancelAnimationFrame(rafId);
+      }
     };
   }, [value, duration]);
 

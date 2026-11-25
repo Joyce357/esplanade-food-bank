@@ -109,9 +109,9 @@ export const PROGRAMS: ProgramItem[] = [
     schedule: "Neighbour-to-neighbour mutual support",
     icon: "diversity_1",
     columns: 5,
-    imageUrl: SITE_MEDIA.communityHallGathering.src,
-    alt: SITE_MEDIA.communityHallGathering.alt,
-    objectPosition: "center 35%",
+    imageUrl: SITE_MEDIA.communityTeamAtTables.src,
+    alt: SITE_MEDIA.communityTeamAtTables.alt,
+    objectPosition: SITE_MEDIA.communityTeamAtTables.objectPosition || "center 30%",
     badgeBg: "bg-secondary-container",
     badgeText: "text-on-secondary-container",
   },
@@ -124,9 +124,9 @@ export const PROGRAMS: ProgramItem[] = [
     schedule: "Dedicated focus and ongoing commitment",
     icon: "volunteer_activism",
     columns: 7,
-    imageUrl: SITE_MEDIA.breakfastCerealsAndSnacks.src,
-    alt: SITE_MEDIA.breakfastCerealsAndSnacks.alt,
-    objectPosition: "center center",
+    imageUrl: SITE_MEDIA.seniorsAndNeighboursHall.src,
+    alt: SITE_MEDIA.seniorsAndNeighboursHall.alt,
+    objectPosition: SITE_MEDIA.seniorsAndNeighboursHall.objectPosition || "center 22%",
     badgeBg: "bg-primary-fixed",
     badgeText: "text-on-primary-fixed",
   },
@@ -175,6 +175,7 @@ export interface GalleryItem {
   imageUrl: string;
   tag: string;
   alt: string;
+  objectPosition?: string;
 }
 
 export const GALLERY_ITEMS: GalleryItem[] = [
@@ -183,12 +184,14 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     imageUrl: SITE_MEDIA.communityHallGathering.src,
     tag: "#CommunityCare",
     alt: SITE_MEDIA.communityHallGathering.alt,
+    objectPosition: SITE_MEDIA.communityHallGathering.objectPosition,
   },
   {
     id: 2,
     imageUrl: SITE_MEDIA.volunteersAtDryGoodsTable.src,
     tag: "#DignityInGiving",
     alt: SITE_MEDIA.volunteersAtDryGoodsTable.alt,
+    objectPosition: SITE_MEDIA.volunteersAtDryGoodsTable.objectPosition,
   },
   {
     id: 3,
@@ -213,6 +216,46 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     imageUrl: SITE_MEDIA.cannedPeasAndBeans.src,
     tag: "#NeighboursFeedingNeighbours",
     alt: SITE_MEDIA.cannedPeasAndBeans.alt,
+  },
+  {
+    id: 7,
+    imageUrl: SITE_MEDIA.communityFamiliesSmile.src,
+    tag: "#CommunityJoy",
+    alt: SITE_MEDIA.communityFamiliesSmile.alt,
+    objectPosition: SITE_MEDIA.communityFamiliesSmile.objectPosition,
+  },
+  {
+    id: 8,
+    imageUrl: SITE_MEDIA.seniorsAndNeighboursHall.src,
+    tag: "#NeighboursTogether",
+    alt: SITE_MEDIA.seniorsAndNeighboursHall.alt,
+    objectPosition: SITE_MEDIA.seniorsAndNeighboursHall.objectPosition,
+  },
+  {
+    id: 9,
+    imageUrl: SITE_MEDIA.communityProduceAndPasta.src,
+    tag: "#FreshProduce",
+    alt: SITE_MEDIA.communityProduceAndPasta.alt,
+    objectPosition: SITE_MEDIA.communityProduceAndPasta.objectPosition,
+  },
+  {
+    id: 10,
+    imageUrl: SITE_MEDIA.communityTeamAtTables.src,
+    tag: "#VolunteersInAction",
+    alt: SITE_MEDIA.communityTeamAtTables.alt,
+    objectPosition: SITE_MEDIA.communityTeamAtTables.objectPosition,
+  },
+  {
+    id: 11,
+    imageUrl: SITE_MEDIA.freshProduceAndBeverages.src,
+    tag: "#WholesomeProvisions",
+    alt: SITE_MEDIA.freshProduceAndBeverages.alt,
+  },
+  {
+    id: 12,
+    imageUrl: SITE_MEDIA.bakeryAndSnackTable.src,
+    tag: "#SharedWithCare",
+    alt: SITE_MEDIA.bakeryAndSnackTable.alt,
   },
 ];
 

@@ -131,4 +131,30 @@ export const HERO_SLIDES: HeroSlide[] = [
       },
     ],
   },
+  {
+    id: 4,
+    imageUrl: SITE_MEDIA.communityProduceAndPasta.src,
+    alt: SITE_MEDIA.communityProduceAndPasta.alt,
+    eyebrow: "Fresh Produce & Staples",
+    headline: "Fresh Food, Shared with Warmth.",
+    supportingLine:
+      "From fresh greens and pantry staples to a welcoming smile, every neighbour is received with care and respect.",
+    tabTitle: "05 Fresh Care",
+    tabSubtitle: "Produce & Community",
+    objectPosition: "center 22%",
+    actions: [
+      {
+        label: "Get Food",
+        href: "/get-food",
+        variant: "primary",
+        icon: "arrow_forward",
+      },
+      {
+        label: "Volunteer",
+        href: "/volunteer",
+        variant: "outline",
+        icon: "diversity_1",
+      },
+    ],
+  },
 ];

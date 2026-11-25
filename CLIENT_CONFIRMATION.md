@@ -12,10 +12,10 @@ In accordance with our content integrity guidelines, placeholder contact details
 | :--- | :--- | :--- | :--- |
 | **Official Helpline Phone** | Pending | | Primary telephone number for public inquiries |
 | **Telephone Availability Hours** | Pending | | Specific days and hours when helpline is answered |
-| **Official Public Email** | Pending | | General inquiry email address (e.g., info@ or hello@) |
-| **Intake / Coordinator Email** | Pending | | Destination inbox for food assistance and volunteer inquiries |
-| **Civic Facility Address** | Pending | | Public pantry address, suite number, and postal code |
-| **Mailing / Postal Address** | Pending | | If different from facility address |
+| **Official Public Email** | Verified | `EsplanadeFoodbank@gmail.com` | Primary inbox for inquiries |
+| **Intake / Coordinator Email** | Verified | `EsplanadeFoodbank@gmail.com` | Notification recipient for all website form submissions |
+| **Civic Facility Address** | Pending Confirmation | | Specific public food distribution details, if separate |
+| **Location Address** | Verified | `David B. Archer Co-operative, 7 Jenoves Place, Toronto, Ontario, M5A 4A6, Canada` | Confirmed organization location |
 | **Social Media Profiles** | Pending | | Official Instagram, Facebook, LinkedIn, or Bluesky handles |
 
 ---

@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { subscribeSchema } from "@/lib/validation/subscribe.schema";
 import { escapeHtml } from "@/lib/validation/sanitize";
 import { checkRateLimit, getClientIp } from "@/lib/security/rate-limit";
+import { parseJsonBodyWithLimit } from "@/lib/security/request-body";
 import { verifyTurnstileToken } from "@/lib/security/turnstile";
 import {
   saveNewsletterSubscription,
@@ -24,6 +25,13 @@ export async function POST(req: Request) {
 
     // A. Handle Form POST for Confirming Unsubscribe (bot-safe)
     if (contentType.includes("application/x-www-form-urlencoded")) {
+      const contentLength = Number(req.headers.get("content-length") || "0");
+      if (!Number.isNaN(contentLength) && contentLength > 4 * 1024) {
+        return NextResponse.json(
+          { success: false, message: "Request payload is too large." },
+          { status: 413 }
+        );
+      }
       const formData = await req.formData();
       const action = formData.get("action");
       const email = formData.get("email")?.toString() || "";
@@ -83,16 +91,15 @@ export async function POST(req: Request) {
       );
     }
 
-    // Parse JSON body safely
-    let body: unknown;
-    try {
-      body = await req.json();
-    } catch {
+    // Parse JSON body safely with strict size limit (4 KB)
+    const parsedBody = await parseJsonBodyWithLimit(req, 4 * 1024);
+    if (!parsedBody.ok) {
       return NextResponse.json(
-        { success: false, message: "Invalid request payload. Expected JSON." },
-        { status: 400 }
+        { success: false, message: parsedBody.message },
+        { status: parsedBody.status }
       );
     }
+    const body = parsedBody.data;
 
     // Check if confirming unsubscribe via JSON
     if (
@@ -124,7 +131,7 @@ export async function POST(req: Request) {
     const validationResult = subscribeSchema.safeParse(body);
     if (!validationResult.success) {
       const fieldErrors: Record<string, string[]> = {};
-      validationResult.error.errors.forEach((err) => {
+      validationResult.error.issues.forEach((err) => {
         const path = err.path.join(".");
         if (!fieldErrors[path]) fieldErrors[path] = [];
         fieldErrors[path].push(err.message);

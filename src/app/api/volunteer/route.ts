@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { volunteerSchema } from "@/lib/validation/volunteer.schema";
 import { checkRateLimit, getClientIp } from "@/lib/security/rate-limit";
+import { parseJsonBodyWithLimit } from "@/lib/security/request-body";
 import { verifyTurnstileToken } from "@/lib/security/turnstile";
 import { saveVolunteerApplication } from "@/lib/db/repository";
 import { sendEmail, SendEmailResult } from "@/lib/email/resend";
@@ -31,16 +32,15 @@ export async function POST(req: Request) {
       );
     }
 
-    // Parse JSON body safely
-    let body: unknown;
-    try {
-      body = await req.json();
-    } catch {
+    // Parse JSON body safely with strict size limit (16 KB)
+    const parsedBody = await parseJsonBodyWithLimit(req, 16 * 1024);
+    if (!parsedBody.ok) {
       return NextResponse.json(
-        { success: false, message: "Invalid request payload. Expected JSON." },
-        { status: 400 }
+        { success: false, message: parsedBody.message },
+        { status: parsedBody.status }
       );
     }
+    const body = parsedBody.data;
 
     // 2. Honeypot check - silently drop spam bots
     if (
@@ -59,7 +59,7 @@ export async function POST(req: Request) {
     const validationResult = volunteerSchema.safeParse(body);
     if (!validationResult.success) {
       const fieldErrors: Record<string, string[]> = {};
-      validationResult.error.errors.forEach((err) => {
+      validationResult.error.issues.forEach((err) => {
         const path = err.path.join(".");
         if (!fieldErrors[path]) fieldErrors[path] = [];
         fieldErrors[path].push(err.message);
@@ -103,7 +103,7 @@ export async function POST(req: Request) {
 
     // 6. Format and send transactional notification email
     const recipient =
-      process.env.VOLUNTEER_NOTIFICATION_EMAIL || process.env.VOLUNTEER_INBOX_EMAIL;
+      process.env.VOLUNTEER_NOTIFICATION_EMAIL || process.env.VOLUNTEER_INBOX_EMAIL || "EsplanadeFoodbank@gmail.com";
 
     let emailResult: SendEmailResult = { sent: false, previewMode: true, message: "" };
 
